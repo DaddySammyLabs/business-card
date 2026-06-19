@@ -1,0 +1,75 @@
+/* src/components/icons/Icon.css */
+@import "../theme/theme-colors.css";
+
+.icon-link {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon-link img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* .icon-link img:hover {
+  text-shadow: 0 0 30px #5838f8;
+  filter: drop-shadow(0px 0px 35px #2900f840);
+  filter: invert(1);
+} */
+
+.icon-link img:hover {
+  /* background: #4824ff; */
+  box-shadow:
+    0 0 10px #4824ff,
+    0 0 25px #4824ff,
+    0 0 40px #4824ff;
+}
+
+/* adaptive */
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+  /* .icon-link {
+    width: 38px;
+    height: 38px;
+  } */
+  .icon-link img {
+    /* width: 40px; */
+    /* height: 40px; */
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+    /* filter: invert(0); */
+  }
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1224px) {
+  .icon-link {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .icon-link {
+    width: 44px;
+    height: 44px;
+  }
+}

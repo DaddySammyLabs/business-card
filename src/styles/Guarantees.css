@@ -1,0 +1,151 @@
+@import "../components/theme/theme-colors.css";
+
+.guarantees-block {
+  margin: 100px 0;
+}
+
+.guarantees-block h1 {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.guarantee-info {
+  list-style: none;
+}
+
+.guarantee-info li {
+  width: 88%;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.guarantee-info .marked-text {
+  color: var(--title-color);
+}
+
+/* footer */
+.line {
+  border: 0;
+  height: 0.8px;
+  background-color: #d2d2d2;
+}
+.footer {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 30px auto;
+  background: linear-gradient(
+    to right,
+    #4824ff,
+    #4824ff,
+    #85ebff,
+    #eeebff,
+    #85ebff,
+    #4824ff,
+    #4824ff
+  );
+  color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-up {
+  position: fixed;
+  right: 5vw;
+  bottom: 6vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.3s linear;
+  animation: appearance 2s forwards;
+  border: none;
+  opacity: 0;
+  transform: translateY(0px);
+  background: transparent;
+
+  /* width: 50px; */
+}
+
+/* .btn-up img {
+  width: 100%;
+} */
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* adaptive */
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (min-width: 1400px) {
+  .guarantees-block {
+    margin: 120px 0;
+  }
+  .guarantees-block h1 {
+    font-size: 50px;
+  }
+
+  .guarantee-info li {
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .guarantees-block {
+    margin: 70px 0;
+  }
+  .guarantees-block h1 {
+    font-size: 30px;
+  }
+
+  .guarantee-info li {
+    width: 100%;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 780px) {
+  .footer {
+    margin: 20px auto;
+  }
+}

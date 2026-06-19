@@ -1,0 +1,48 @@
+.animation {
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+  min-height: 650px;
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-image {
+  display: block;
+  width: 90%;
+
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+/* @media (min-width: 1440px) {
+  .animation {
+    min-height: 750px;
+  }
+} */
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
+}

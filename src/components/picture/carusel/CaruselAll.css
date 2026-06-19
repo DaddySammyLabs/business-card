@@ -1,0 +1,127 @@
+/* src/components/pictures/carusel/CaruselAll.css */
+@import "../../theme/theme-colors.css";
+
+.carusel-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.carusel-content {
+  display: flex;
+}
+
+.carusel-image {
+  width: auto;
+  height: 200px;
+  border-radius: 16px;
+  margin: 10px;
+}
+.carusel-image:hover {
+  cursor: pointer;
+}
+
+/* .modal-window-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  z-index: 1000;
+} */
+.carusel-container .modal-window-image {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000cc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 20;
+  padding: 20px;
+}
+
+.carusel-container .modal-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+
+  width: auto;
+  height: auto;
+
+  display: block;
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.modal-image-inner {
+  position: relative;
+  /* display: flex; */
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.carusel-container .image-close-button {
+  margin-top: -18px;
+  margin-left: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 0;
+  font-size: 30px;
+  color: #4824ff;
+  outline: none;
+  transition: 0.5s ease-in-out;
+}
+.carusel-container .image-close-button:hover {
+  filter: drop-shadow(0px 0px 30px #4824ff75);
+  background: #fff;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+/* 
+.carusel-container .image-close-button::before,
+.carusel-container .image-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 4px;
+  background-color: #4824ff;
+}
+
+.carusel-container .image-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.carusel-container .image-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+} 
+  */

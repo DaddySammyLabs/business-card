@@ -1,0 +1,251 @@
+/* .info-block {} */
+@import "../theme/theme-colors.css";
+
+.hero {
+  margin-top: 100px;
+  /* height: 600px; */
+  height: auto;
+  display: flex;
+  place-items: center;
+}
+
+.hero .violet-text {
+  color: var(--title-color);
+}
+
+.hero .info-block h1 {
+  font-size: 32px;
+}
+
+.hero .info-block h2 {
+  margin: 8% 0;
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.hero .info-block .author {
+  background: linear-gradient(
+    to right,
+    #4824ff,
+    #4824ff,
+    #85ebff,
+    #eeebff,
+    #85ebff,
+    #4824ff,
+    #4824ff
+  );
+  color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: gradientAnimation 5s linear infinite;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero .info-block h3 {
+  background-color: var(--hero-background);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  /* color: var(--hero-text-color); */
+
+  font-size: 17px;
+  font-weight: 300;
+  /* color: var(--title-color); */
+
+  border: #4824ff solid 0.5px;
+
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 40vw;
+
+  position: relative;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* .hero .info-block h3:hover {
+  filter: drop-shadow(0px 0px 35px #4824ff);
+} */
+
+.hero .info-block h3:before {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 25px;
+  background-color: #ffffffbd;
+  filter: blur(2px);
+  transition: 2.5s;
+  transform: rotate(-20deg) translateX(-50px) translateY(-200px);
+}
+.hero .info-block h3:hover:before {
+  transform: rotate(-20deg) translateX(450px);
+}
+
+.hero .info-block {
+  align-content: center;
+  width: 50%;
+}
+.hero img {
+  width: 100%;
+}
+
+/* adaptive */
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+  .hero {
+    margin-top: 20px;
+  }
+  .hero .info-block h2 {
+    font-size: 18px;
+    width: 80vw;
+  }
+  .hero .info-block h3 {
+    font-size: 16px;
+    width: 80vw;
+  }
+  .animation {
+    top: -120px;
+  }
+}
+@media (min-width: 412px) {
+  /* .hero {
+    height: 400px;
+  } */
+  .hero .info-block h1 {
+    font-size: 32px;
+    font-weight: 600;
+    /* font-size: 52px; */
+  }
+  .hero .info-block h2 {
+    font-size: 20px;
+    width: 100vw;
+  }
+  .hero .info-block h3 {
+    font-size: 16px;
+    width: 80vw;
+  }
+  .animation {
+    top: -100px;
+  }
+}
+@media (min-width: 500px) {
+  .animation {
+    top: -50px;
+  }
+
+  /* .hero .info-block h3 {
+    width: 70vw;
+  } */
+}
+@media (min-width: 600px) {
+  .hero {
+    margin-top: 50px;
+  }
+  .animation {
+    top: -30px;
+  }
+  .hero .info-block h3 {
+    font-size: 18px;
+    width: 44vw;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 450px;
+    margin-top: 100px;
+  }
+
+  .hero .info-block h1 {
+    font-size: 42px;
+  }
+  .hero .info-block h2 {
+    font-size: 25px;
+  }
+  .hero .info-block h3 {
+    font-size: 18px;
+    width: 40vw;
+  }
+  .animation {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero .info-block h1 {
+    font-size: 44px;
+    font-weight: 700;
+  }
+
+  .hero .info-block h2 {
+    font-size: 27px;
+  }
+
+  .hero .info-block h3 {
+    font-size: 20px;
+    font-weight: 300;
+    width: 35vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    height: 550px;
+  }
+
+  .hero .info-block h1 {
+    font-size: 48px;
+    /* font-size: 52px; */
+  }
+
+  .hero .info-block h2 {
+    font-size: 30px;
+    font-weight: 450;
+  }
+
+  .hero .info-block h3 {
+    font-size: 22px;
+    font-weight: 300;
+    /* width: 30vw; */
+  }
+}
+
+@media (min-width: 1224px) {
+  .hero .info-block h1 {
+    font-size: 50px;
+    /* font-size: 52px; */
+  }
+
+  .hero .info-block h3 {
+    font-size: 24px;
+    width: 61%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    height: 650px;
+  }
+  .hero .info-block h1 {
+    font-size: 52px;
+  }
+  .hero .info-block h2 {
+    font-size: 42px;
+    font-weight: 500;
+  }
+  .hero .info-block h3 {
+    font-size: 30px;
+    width: 61%;
+  }
+  .hero img {
+    width: 86%;
+  }
+}

@@ -1,0 +1,103 @@
+/* src/components/pictures/carusel/Banners.css */
+
+.banner-gallery {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5vw;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  --row-height: 200px;
+  max-height: calc((var(--row-height) + 10px) * var(--visible-rows));
+  overflow: hidden;
+}
+
+.banner-images {
+  height: var(--row-height);
+  width: auto;
+
+  border-radius: 16px;
+  cursor: pointer;
+  display: block;
+}
+
+.show-more-images {
+  margin-top: 12px;
+  padding: 10px 20px;
+
+  font-size: 18px;
+  background: #4824ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.show-more-images:hover {
+  background: #000;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  color: #4824ff;
+  transition: 0.5s ease-in-out;
+}
+
+.close-btn:hover {
+  filter: drop-shadow(0px 0px 30px #4824ff75);
+  background: #fff;
+}
+
+@media (min-width: 1400px) {
+  .show-more-images {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .show-more-images {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,255 @@
+/* src/styles/Review.css */
+
+.review-block {
+  margin: 80px 0px;
+  /* height: 580px; */
+  height: auto;
+  background-color: #4824ff;
+  border-radius: 28px;
+  /* padding: 20px; */
+}
+
+.review-block h1 {
+  color: #fff;
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.review-block .description {
+  color: #fff;
+  text-align: center;
+  /* margin-top: -12px; */
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+.review-block .selecting {
+  background-color: #fff;
+  color: #000;
+  margin: 0 8px;
+}
+
+.review-carusel {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 81vw;
+  /* width: 1269px; */
+}
+
+.review-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.review-container::-webkit-scrollbar {
+  display: none;
+}
+
+.buttons-carusel {
+  display: flex;
+  justify-content: center;
+}
+
+.next-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #8f7de9;
+  /* background-color: #fff; */
+  cursor: pointer;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 0 10px;
+}
+
+/* .next-button .array-next-icon {
+  content: url(/public/icons/arrow_right.svg);
+  scale: 0.7;
+  height: 50px;
+  padding: 15px;
+}
+.button-prew .array-next-icon {
+  content: url(/public/icons/arrow_left.svg);
+} */
+
+.next-button:hover {
+  background-color: #00000050;
+}
+/* .next-button:hover img {
+  filter: invert(100%);
+} */
+
+/* components/Review.jsx || ReviewItem.jsx */
+.review-card h2 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-top: 1vw;
+  margin-bottom: 0.2vw;
+  color: #000;
+  color: #13006e;
+}
+
+.review-card {
+  min-width: 27vw;
+  /* min-width: 420px; */
+}
+
+.review-content {
+  height: 230px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 24px;
+  margin: 10px 18px;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.review-content::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.review-content .review-content-inner {
+  padding: 0 20px 0 30px;
+}
+
+.review-content .review-content-inner .content-inner-wrapper {
+  display: flex;
+  place-items: center;
+}
+
+.review-content .review-content-inner .content-inner-wrapper h2 {
+  width: 90%;
+}
+
+.review-block .review {
+  color: #333;
+  color: #3f3282;
+  font-size: 18px;
+  line-height: 20px;
+  /* filter: invert(100%); */
+}
+.review-block .link {
+  display: flex;
+  position: rigth;
+  height: 40px;
+  width: 80px;
+  background-color: #000;
+  border-radius: 24px;
+  cursor: pointer;
+  border: 2px solid #000;
+  transition: 0.5s ease-in-out;
+}
+.review-block .link:hover {
+  border: 2px double #4824ff;
+  filter: drop-shadow(0px 0px 25px #4824ff90);
+}
+
+.review-block .telegram-icon {
+  margin: -7px -4px;
+  padding: 0;
+  position: relative;
+  /* content: url(/public/icons/telegram.svg); */
+  height: 42px;
+  scale: 0.84;
+  top: 4px;
+  left: 2px;
+  color: #fff;
+}
+
+/* .review-block .array-corner-icon { */
+.review-block .link-icon {
+  margin: -6px -18px;
+  padding: 0;
+  position: relative;
+  /* content: url(/public/icons/link.svg); */
+  height: 42px;
+  scale: 0.68;
+  top: 4px;
+  right: -14px;
+
+  color: #fff;
+  font-size: 30px;
+}
+
+/* adaptive */
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+  .review-block {
+    margin: 80px 0px;
+    height: 580px;
+    border-radius: 28px;
+    /* padding: 20px; */
+  }
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
+}
+
+@media (min-width: 1400px) {
+  .review-block h1 {
+    font-size: 50px;
+  }
+
+  .review-block .description {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .review-card h2 {
+    font-size: 25px;
+  }
+
+  .review-carusel {
+    width: 1269px;
+  }
+  .review-card {
+    min-width: 420px;
+  }
+
+  .review-block .review {
+    font-size: 20px;
+    line-height: 27px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .review-block {
+    height: 620px;
+  }
+  .review-block h1 {
+    font-size: 30px;
+  }
+
+  .review-card h2 {
+    font-size: 18px;
+  }
+  .review-block .review {
+    font-size: 16px;
+  }
+  .review-block .telegram-icon {
+    height: 36px;
+    top: 6px;
+  }
+}

@@ -1,0 +1,43 @@
+
+// toUse: 1-import, 2-cont, 3-comp
+
+// 1-import useTheme + SwitcherTheme
+import useTheme from "../hooks/useTheme";
+import SwitcherTheme from "../components/theme/SwitcherTheme";
+
+// 2-set-variable 
+const { theme, toggleTheme } = useTheme();
+
+// 3-use-in-component
+<>
+  <SwitcherTheme theme={theme} toggleTheme={toggleTheme} />
+</>;
+
+/----*----* for-example *----*----/
+
+import useTheme from "../hooks/useTheme";
+import SwitcherTheme from "../components/theme/SwitcherTheme";
+
+function Header({ texts }) {
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    <>
+      <nav className="navbar">
+        <ul>
+          <li>
+            <a href="#about">{texts.about}</a>
+          </li>
+        </ul>
+        <SwitcherTheme theme={theme} toggleTheme={toggleTheme} />
+      </nav>
+
+      <ModalWindow show={isOpen} onClose={close} texts={texts}>
+        <h2 className="modal-title">{texts.modalTitle}</h2>
+        <p className="modal-text">{texts.modalText}</p>
+      </ModalWindow>
+    </>
+  );
+}
+
+export default Header;

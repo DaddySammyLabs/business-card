@@ -1,0 +1,94 @@
+/* src/components/pictures/carusel/BannersFirst.css */
+
+/* image-gallery */
+.banner-gallery {
+  padding: 0 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: 5vw;
+  margin-right: 5vw;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: calc(200px * var(--visible-rows));
+  overflow: hidden;
+}
+
+/* gallery-image */
+.banner-images {
+  width: calc(25% - 8px);
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+/* .image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.banner-images {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+} */
+
+/* .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.banner-images {
+  height: 200px;
+  width: auto;
+  border-radius: 16px;
+  cursor: pointer;
+} */
+
+/* show-more-button */
+.show-more-images {
+  display: flex;
+  font-size: 22px;
+  margin-top: 10px;
+  padding: 10px 10px 10px 30px;
+  background-color: #4824ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.5s ease-in-out;
+}
+.show-more-images:hover {
+  background-color: #000;
+  filter: drop-shadow(0px 0px 30px #4824ff25);
+}
+
+.more-icon {
+  margin: -12px;
+  padding: 0;
+  position: relative;
+  /* content: url(/public/favicon.svg); */
+  background: none;
+  scale: 0.25;
+  height: 50px;
+}
+
+.banner-gallery .modal-image-inner {
+  display: flex;
+}
+
+@media (min-width: 1400px) {
+  .show-more-images {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .show-more-images {
+    font-size: 16px;
+  }
+}

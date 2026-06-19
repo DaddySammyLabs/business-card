@@ -1,0 +1,78 @@
+/* src/components/animation/ImageBox.css */
+/* styles from cource Coderum */
+.main-image-box {
+  width: 45%;
+  /* margin-top: -3%; */
+  position: relative;
+}
+
+.hero-image {
+  width: 90%;
+  margin: 0 auto;
+}
+/* .first-image-layer {
+  position: absolute;
+  height: 550px;
+} */
+
+.second-image-layer {
+  animation: bouncing 5s linear infinite;
+  height: 550px;
+  width: 550px;
+}
+.third-image-layer {
+  height: 550px;
+  position: absolute;
+  margin-left: -550px;
+  margin-top: 24px;
+}
+.fourth-image-layer {
+  height: 550px;
+  position: absolute;
+  margin-left: -500px;
+  margin-top: 24px;
+}
+.fifth-image-layer {
+  height: 550px;
+  position: absolute;
+  margin-left: -1100px;
+  margin-top: 24px;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY((0px));
+  }
+  50% {
+    transform: translateY((20px));
+  }
+  0% {
+    transform: translateY((0px));
+  }
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
+}
+@media (max-width: 1100px) {
+  .main-image-box {
+    width: 40%;
+    margin-top: -3%;
+  }
+}

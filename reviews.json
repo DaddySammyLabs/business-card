@@ -1,0 +1,52 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": {
+        "ru": "Владислав М.",
+        "en": "Vladislav M."
+      },
+      "link": "https://t.me/Samy_Yusuf",
+      "text": {
+        "ru": "What is love, Текст отзыва на русском.",
+        "en": "Review text in English."
+      }
+    },
+    {
+      "id": 2,
+      "name": {
+        "ru": "Никита Ч.",
+        "en": "Nikita Ch."
+      },
+      "link": "https://t.me/Samy_Yusuf",
+      "text": {
+        "ru": "Отзыв Никитыч на русском.",
+        "en": "Nikita's review in English."
+      }
+    },
+    {
+      "id": 3,
+      "name": {
+        "ru": "Антон Т.",
+        "en": "Anton T."
+      },
+      "link": "https://t.me/Samy_Yusuf",
+      "text": {
+        "ru": "Антон Т - Текс Текст отзыва на русском.",
+        "en": "Review text in English."
+      }
+    },
+    {
+      "id": 4,
+      "name": {
+        "ru": "Алексей П.",
+        "en": "Alexey P."
+      },
+      "link": "https://t.me/Samy_Yusuf",
+      "text": {
+        "ru": "Текс Отзыва на русском.",
+        "en": "Alexey's review in English."
+      }
+    }
+  ]
+}

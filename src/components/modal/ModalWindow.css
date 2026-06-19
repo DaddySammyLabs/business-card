@@ -1,0 +1,165 @@
+/* src/components/modal/ModalWindow.css */
+@import "../theme/theme-colors.css";
+
+/* into App.css block--ModalWindow 
+.modal-title {
+  color: #4824ff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.modal-text {
+  color: #3f3282;
+  font-size: 22px;
+  margin-bottom: 30px;
+} */
+
+.modal-social {
+  display: flex;
+}
+.modal-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/*  */
+.modal-backdrop {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+
+  z-index: 1000;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  /* color: #333; */
+  padding: 40px;
+  border-radius: 16px;
+  width: 500px;
+  height: 285px;
+  transform: translateY(-50px);
+  transition: transform 0.5s ease;
+  z-index: 1001;
+}
+
+.modal-backdrop.show .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  outline: none;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  height: 55px;
+  width: 220px;
+
+  border-radius: 55px;
+  background: #333;
+
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* icons-image */
+.social {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.social.telegram {
+  content: url(/icons/telegram.svg);
+}
+
+.social.instagram {
+  content: url(/icons/instagram.svg);
+}
+
+.social-button:hover {
+  background: #4824ff;
+  filter: drop-shadow(0px 0px 35px #4824ff40);
+  color: #eeebff;
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
+}
