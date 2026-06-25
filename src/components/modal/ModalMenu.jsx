@@ -30,7 +30,7 @@ function ModalMenu({
     } else {
       const timer = setTimeout(() => {
         setIsMounted(false);
-      }, 300); // время анимации
+      }, 50);
 
       return () => clearTimeout(timer);
     }
@@ -53,11 +53,11 @@ function ModalMenu({
         className={`menu-panel ${show ? "open" : "close"}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button
+        {/* <button
           className="menu-close"
           onClick={onClose}
           aria-label="close menu"
-        />
+        /> */}
 
         <div className="menu-language">
           <LanguageSwitcher language={language} setLanguage={setLanguage} />

@@ -1,8 +1,8 @@
-import useModal from "../../hooks/useModal";
+import useModal from "../../../hooks/useModal";
 
-import Icon from "../icons/Icon";
-import SwitcherTheme from "../theme/SwitcherTheme";
-import ModalMenu from "../modal/ModalMenu";
+import Icon from "../../icons/Icon";
+import SwitcherTheme from "../../theme/SwitcherTheme";
+import ModalMenu from "../../modal/ModalMenu";
 
 import "./HeaderMobile.css";
 

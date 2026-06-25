@@ -27,6 +27,22 @@
   }
 } */
 
+@media (max-width: 767px) {
+  .animation {
+    width: 80vw;
+    min-height: auto;
+    height: auto;
+
+    margin: 30px auto;
+    padding: 0;
+  }
+
+  .animation-image {
+    width: 100vw;
+    max-width: none;
+  }
+}
+
 @media (min-width: 320px) {
 }
 @media (min-width: 375px) {

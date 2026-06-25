@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+
+import useResize from "@/hooks/Resize";
 
 import Icon from "../icons/Icon";
 import SwitcherTheme from "../theme/SwitcherTheme";
 import LanguageSwitcher from "../languages/LanguageSwitcher";
 
-import HeaderMobile from "./HeaderMobile";
+import HeaderMobile from "./header-mobile/HeaderMobile";
 
 import "./Header.css";
 
@@ -18,19 +20,20 @@ function Header({
   upButton,
   toBlock,
 }) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const isMobile = useResize();
+  // const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth < 768);
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
 
   return (
     <>

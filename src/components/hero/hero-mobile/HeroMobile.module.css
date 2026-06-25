@@ -1,0 +1,146 @@
+@import "../../theme/theme-colors.css";
+
+.heroMobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.violetText {
+  color: var(--title-color);
+}
+
+.heroMobile h1 {
+  font-size: 42px;
+}
+
+.heroMobile h2 {
+  margin: 2% 0;
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.author {
+  background: linear-gradient(
+    to right,
+    #4824ff,
+    #4824ff,
+    #85ebff,
+    #eeebff,
+    #85ebff,
+    #4824ff,
+    #4824ff
+  );
+  color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: gradientAnimation 5s linear infinite;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.heroMobile h3 {
+  background-color: var(--hero-background);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  border: #4824ff solid 0.5px;
+
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: 40vw;
+
+  position: relative;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.heroMobile h3:before {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 25px;
+  background-color: #ffffffbd;
+  filter: blur(2px);
+  transition: 2.5s;
+  transform: rotate(-20deg) translateX(-50px) translateY(-200px);
+}
+.heroMobile h3:hover:before {
+  transform: rotate(-20deg) translateX(450px);
+}
+
+.info {
+  align-content: center;
+  width: 100%;
+}
+
+.heroMobile img {
+  width: 100%;
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+  .hero {
+    margin-top: 20px;
+  }
+  .hero .info-block h2 {
+    font-size: 18px;
+    width: 80vw;
+  }
+  .hero .info-block h3 {
+    font-size: 16px;
+    width: 80vw;
+  }
+  .animation {
+    top: -120px;
+  }
+}
+@media (min-width: 412px) {
+  /* .hero {
+    height: 400px;
+  } */
+  .hero .info-block h1 {
+    font-size: 32px;
+    font-weight: 600;
+    /* font-size: 52px; */
+  }
+  .hero .info-block h2 {
+    font-size: 20px;
+    width: 100vw;
+  }
+  .hero .info-block h3 {
+    font-size: 16px;
+    width: 80vw;
+  }
+  .animation {
+    top: -100px;
+  }
+}
+@media (min-width: 500px) {
+  .animation {
+    top: -50px;
+  }
+
+  /* .hero .info-block h3 {
+    width: 70vw;
+  } */
+}
+@media (min-width: 600px) {
+  .hero {
+    margin-top: 50px;
+  }
+  .animation {
+    top: -30px;
+  }
+  .hero .info-block h3 {
+    font-size: 18px;
+    width: 44vw;
+  }
+}
