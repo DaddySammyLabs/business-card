@@ -49,7 +49,7 @@ function ModalWindow({ show, onClose, children, texts }) {
 
         <div className="modal-social">
           <a
-            href="https://t.me/Samy_Yusuf"
+            href="https://t.me/TheDaddySammy"
             target="_blank"
             rel="noreferrer"
             className="social-button"

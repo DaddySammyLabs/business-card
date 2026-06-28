@@ -42,26 +42,6 @@ function Hero({ texts }) {
         </div>
       ) : (
         <HeroMobile texts={texts} />
-        // <div className="hero-mobile">
-        //   <Animation titleImage={heroimage} number="first" />
-
-        //   <div className="info-block">
-        //     <h1>
-        //       {texts.hero_title}
-        //       <span className="author">{texts.author}</span>
-        //     </h1>
-        //     <h2>
-        //       {texts.Ido}
-        //       <span className="violet-text">{texts.hero_subtitle_part2} </span>
-        //       {texts.hero_subtitle_part3}
-        //       <br />
-        //       <span className="violet-text">{texts.hero_subtitle_part4}</span>
-        //       <br />
-        //       {texts.hero_subtitle_part5}
-        //     </h2>
-        //     <h3>{texts.hero_info}</h3>
-        //   </div>
-        // </div>
       )}
     </>
   );

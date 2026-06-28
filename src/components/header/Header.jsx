@@ -94,7 +94,7 @@ function Header({
                     : "/icons/telegram.svg"
                 }
                 title={texts.telegram}
-                link={"https://t.me/Samy_Yusuf"}
+                link={"https://t.me/TheDaddySammy"}
               />
 
               <SwitcherTheme theme={theme} toggleTheme={toggleTheme} />

@@ -3,6 +3,14 @@
 .heroMobile {
   display: flex;
   flex-direction: column;
+  /* text-align: center; */
+}
+
+.info {
+  align-content: center;
+  text-align: center;
+
+  width: 100%;
 }
 
 .violetText {
@@ -14,7 +22,7 @@
 }
 
 .heroMobile h2 {
-  margin: 2% 0;
+  margin: 5% 0;
   font-size: 20px;
   font-weight: 450;
 }
@@ -54,7 +62,8 @@
 
   padding: 10px 10px;
   border-radius: 20px;
-  width: 40vw;
+  width: 80vw;
+  margin: 0 auto;
 
   position: relative;
   transition: 0.5s ease-in-out;
@@ -75,11 +84,6 @@
   transform: rotate(-20deg) translateX(450px);
 }
 
-.info {
-  align-content: center;
-  width: 100%;
-}
-
 .heroMobile img {
   width: 100%;
 }
@@ -87,60 +91,28 @@
 @media (min-width: 320px) {
 }
 @media (min-width: 375px) {
-  .hero {
-    margin-top: 20px;
-  }
-  .hero .info-block h2 {
-    font-size: 18px;
-    width: 80vw;
-  }
-  .hero .info-block h3 {
-    font-size: 16px;
-    width: 80vw;
-  }
-  .animation {
-    top: -120px;
-  }
 }
 @media (min-width: 412px) {
-  /* .hero {
-    height: 400px;
-  } */
-  .hero .info-block h1 {
-    font-size: 32px;
-    font-weight: 600;
-    /* font-size: 52px; */
-  }
-  .hero .info-block h2 {
-    font-size: 20px;
-    width: 100vw;
-  }
-  .hero .info-block h3 {
-    font-size: 16px;
-    width: 80vw;
-  }
-  .animation {
-    top: -100px;
-  }
 }
 @media (min-width: 500px) {
-  .animation {
-    top: -50px;
+  .info h3 {
+    width: 50vw;
   }
-
-  /* .hero .info-block h3 {
-    width: 70vw;
-  } */
 }
 @media (min-width: 600px) {
-  .hero {
-    margin-top: 50px;
+  .heroMobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
   }
-  .animation {
-    top: -30px;
+
+  .info {
+    width: 40%;
+    text-align: inherit;
   }
-  .hero .info-block h3 {
-    font-size: 18px;
-    width: 44vw;
+
+  .info h3 {
+    width: 30vw;
   }
 }

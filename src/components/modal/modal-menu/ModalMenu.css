@@ -15,7 +15,7 @@
   position: absolute;
   top: 3%;
   right: 5%;
-  width: 140px;
+  width: 150px;
   height: 180px;
   background: white;
   padding: 40px 30px;
@@ -23,7 +23,7 @@
   animation: menuShow 0.3s forwards;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
 
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .menu-panel.open {
@@ -103,7 +103,7 @@
 .menu-overlay .menu-list a {
   text-decoration: none;
   color: #333;
-  font-size: 13px;
+  font-size: 16px;
   transition: 0.3s;
 }
 

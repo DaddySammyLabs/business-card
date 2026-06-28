@@ -18,7 +18,7 @@ import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
 import Portfolio from "./components/picture/Portfolio";
 
-import ReviewCarusel from "./components/ReviewCarusel";
+import ReviewCarusel from "./components/reviews/ReviewCarusel";
 import Guarantees from "./components/Guarantees";
 
 function App() {
@@ -77,7 +77,7 @@ function App() {
         <Services theme={theme} texts={texts[language]} openModal={open} />
         <Portfolio texts={texts[language]} />
         <div className="container">
-          <ReviewCarusel language={language} />
+          <ReviewCarusel texts={texts[language]} language={language} />
 
           <Guarantees
             upButton={upButton}

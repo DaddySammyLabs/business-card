@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useState } from "react";
 
 import "./ModalMenu.css";
-import LanguageSwitcher from "../languages/LanguageSwitcher";
+import LanguageSwitcher from "@/components/languages/LanguageSwitcher";
 
 function ModalMenu({
   show,

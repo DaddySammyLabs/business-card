@@ -22,8 +22,8 @@
 }
 
 .menu-header {
-  width: 2em;
-  height: 2em;
+  width: 2.6em;
+  height: 2.6em;
 }
 
 .menu-header img {
@@ -75,10 +75,10 @@
   }
 }
 @media (min-width: 375px) {
-  .menu-header {
+  /* .menu-header {
     width: 2.4em;
     height: 2.4em;
-  }
+  } */
 }
 @media (min-width: 480px) {
   .header-mobile {

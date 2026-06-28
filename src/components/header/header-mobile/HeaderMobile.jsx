@@ -1,8 +1,8 @@
 import useModal from "../../../hooks/useModal";
 
 import Icon from "../../icons/Icon";
-import SwitcherTheme from "../../theme/SwitcherTheme";
-import ModalMenu from "../../modal/ModalMenu";
+import SwitcherTheme from "@/components/theme/SwitcherTheme";
+import ModalMenu from "../../modal/modal-menu/ModalMenu";
 
 import "./HeaderMobile.css";
 
@@ -39,7 +39,7 @@ function HeaderMobile({
               ? "/icons/dark_telegram.svg"
               : "/icons/telegram.svg"
           }
-          link="https://t.me/Samy_Yusuf"
+          link="https://t.me/TheDaddySammy"
         />
 
         <span type="button" className="menu-header" onClick={open}>
