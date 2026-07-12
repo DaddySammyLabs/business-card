@@ -101,14 +101,19 @@ function App() {
           <h2
             className="modal-title"
             style={{
-              fontSize: isMobile && "40px",
+              fontSize: isMobile && "45px",
               marginTop: isMobile ? "" : "0",
             }}
           >
             {" "}
             {texts[language].modalTitle}
           </h2>
-          <p className="modal-text">
+          <p
+            style={{
+              fontSize: isMobile && "28px",
+            }}
+            className="modal-text"
+          >
             {texts[language].modalText}
             <b>{texts[language].modalInstagram}</b>
           </p>

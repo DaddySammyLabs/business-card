@@ -41,7 +41,7 @@ function ModalWindow({ show, onClose, children, texts }) {
 
   return (
     <div className={`modal-backdrop ${show ? "show" : ""}`} onClick={onClose}>
-      <div style={{ scale: isMobile ? "0.5" : "1" }}>
+      <div style={{ scale: isMobile ? "0.8" : "1" }}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <button
             onClick={onClose}
@@ -54,6 +54,7 @@ function ModalWindow({ show, onClose, children, texts }) {
           <div
             style={{
               scale: isMobile ? "1.12" : "1",
+              gap: isMobile && "8px",
             }}
             className="modal-social"
           >
