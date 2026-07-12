@@ -110,7 +110,6 @@ function App() {
           <p
             style={{
               fontSize: isMobile && "25px",
-              marginBottom: isMobile && "15px",
             }}
             className="modal-text"
           >
