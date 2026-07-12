@@ -99,18 +99,18 @@ function App() {
       >
         <div className="modal-window">
           <h2
-            className="modal-title"
             style={{
-              fontSize: isMobile && "45px",
-              marginTop: isMobile ? "" : "0",
+              marginBottom: isMobile && "10px",
             }}
+            className="modal-title"
           >
             {" "}
             {texts[language].modalTitle}
           </h2>
           <p
             style={{
-              fontSize: isMobile && "28px",
+              fontSize: isMobile && "25px",
+              marginBottom: isMobile && "15px",
             }}
             className="modal-text"
           >
