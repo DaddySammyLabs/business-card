@@ -2,10 +2,13 @@
 
 import React, { useState, useCallback, useEffect } from "react";
 
+import useResize from "@/hooks/Resize";
+
 import "./ModalWindow.css";
 
 function ModalWindow({ show, onClose, children, texts }) {
   const [isVisible, setIsVisible] = useState(show);
+  const isMobile = useResize();
 
   const handleKeyDown = useCallback(
     (event) => {
@@ -38,35 +41,42 @@ function ModalWindow({ show, onClose, children, texts }) {
 
   return (
     <div className={`modal-backdrop ${show ? "show" : ""}`} onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button
-          onClick={onClose}
-          className="modal-close-button"
-          aria-label="Close modal"
-        />
+      <div style={{ scale: isMobile ? "0.5" : "1" }}>
+        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <button
+            onClick={onClose}
+            className="modal-close-button"
+            aria-label="Close modal"
+          />
 
-        {children}
+          {children}
 
-        <div className="modal-social">
-          <a
-            href="https://t.me/TheDaddySammy"
-            target="_blank"
-            rel="noreferrer"
-            className="social-button"
+          <div
+            style={{
+              scale: isMobile ? "1.12" : "1",
+            }}
+            className="modal-social"
           >
-            <span className="social telegram"></span>
-            {texts.telegram}
-          </a>
+            <a
+              href="https://t.me/TheDaddySammy"
+              target="_blank"
+              rel="noreferrer"
+              className="social-button"
+            >
+              <span className="social telegram"></span>
+              {texts.telegram}
+            </a>
 
-          <a
-            href="https://www.instagram.com/smashkarimov/"
-            target="_blank"
-            rel="noreferrer"
-            className="social-button"
-          >
-            <span className="social instagram"></span>
-            {texts.instagram}
-          </a>
+            <a
+              href="https://www.instagram.com/smashkarimov/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-button"
+            >
+              <span className="social instagram"></span>
+              {texts.instagram}
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -76,7 +86,6 @@ function ModalWindow({ show, onClose, children, texts }) {
 export default ModalWindow;
 
 // import React, { useState, useCallback, useEffect } from "react";
-
 // import "../styles/ModalWindow.css";
 
 // function ModalWindow({ show, onClose, childen, texts }) {

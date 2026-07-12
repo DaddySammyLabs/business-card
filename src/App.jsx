@@ -10,6 +10,7 @@ import texts from "./constants/texts";
 import useLanguage from "./hooks/useLanguage";
 import useTheme from "./hooks/useTheme";
 import useModal from "./hooks/useModal";
+import useResize from "./hooks/Resize";
 
 import ModalWindow from "./components/modal/ModalWindow";
 
@@ -25,6 +26,7 @@ function App() {
   const { language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const { isOpen, open, close } = useModal();
+  const isMobile = useResize();
 
   const [parent] = useAutoAnimate();
 
@@ -96,7 +98,16 @@ function App() {
         texts={texts[language]}
       >
         <div className="modal-window">
-          <h2 className="modal-title"> {texts[language].modalTitle}</h2>
+          <h2
+            className="modal-title"
+            style={{
+              fontSize: isMobile && "40px",
+              marginTop: isMobile ? "" : "0",
+            }}
+          >
+            {" "}
+            {texts[language].modalTitle}
+          </h2>
           <p className="modal-text">
             {texts[language].modalText}
             <b>{texts[language].modalInstagram}</b>

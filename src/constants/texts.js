@@ -18,7 +18,7 @@ const texts = {
     telegram: "Telegram",
 
     hero_title: "Web Designer ",
-    author: "Daddy Samy",
+    author: "Daddy Sammy",
     hero_subtitle_part2: "a marketable ",
     hero_subtitle_part3: "and ",
     hero_subtitle_part4: "unique design ",
