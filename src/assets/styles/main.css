@@ -3,7 +3,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 
-@import "../components/theme/theme-colors.css";
+@import "../../components/ui/theme/theme-colors.css";
 
 /* font-family: "Poppins", sans-serif; */
 /* font-family: "Montserrat", sans-serif; */

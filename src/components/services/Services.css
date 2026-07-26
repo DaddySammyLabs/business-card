@@ -1,5 +1,5 @@
 /* src/components/services/Services.css */
-@import "../theme/theme-colors.css";
+@import "../ui/theme/theme-colors.css";
 
 .wrapper-service {
   width: 98%;

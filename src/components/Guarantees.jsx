@@ -1,7 +1,7 @@
 import React from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-import "../styles/Guarantees.css";
+import "../assets/styles/Guarantees.css";
 
 function Guarantees({ upButton, scroll, theme, texts, language = "ru" }) {
   const [parent] = useAutoAnimate();

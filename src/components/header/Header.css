@@ -1,5 +1,5 @@
 /* src/styles/Header.css */
-@import "../../components/theme/theme-colors.css";
+@import "../../components/ui/theme/theme-colors.css";
 
 .header {
   width: 100%;

@@ -1,5 +1,5 @@
 /* .info-block {} */
-@import "../theme/theme-colors.css";
+@import "../ui/theme/theme-colors.css";
 
 .hero {
   margin-top: 100px;

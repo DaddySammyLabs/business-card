@@ -1,5 +1,5 @@
 /* src/components/pictures/carusel/CaruselAll.css */
-@import "../../theme/theme-colors.css";
+@import "../../ui/theme/theme-colors.css";
 
 .carusel-container {
   display: flex;

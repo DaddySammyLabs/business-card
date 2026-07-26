@@ -1,4 +1,4 @@
-@import "../components/theme/theme-colors.css";
+@import "../../components/ui/theme/theme-colors.css";
 
 .guarantees-block {
   margin: 100px 0;

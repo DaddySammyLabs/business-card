@@ -1,11 +1,14 @@
 // ReviewCarusel-one-review.jsx
 
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import useReviewsCarousel from "@/hooks/useReviewsCarousel";
 
 import "./ReviewSmoothCarusel.css";
 import Review from "../Review";
 
 function MobileReviews({ texts, language = "ru" }) {
+  const [parent] = useAutoAnimate();
+
   const { reviewsData, index, loading, next, prev } = useReviewsCarousel();
 
   if (loading) {

@@ -2,8 +2,8 @@
 
 import "./SwitcherTheme.css";
 
-import sunIcon from "../../assets/icons/icon-sun.svg";
-import moonIcon from "../../assets/icons/icon-moon.png";
+import sunIcon from "../../../assets/icons/icon-sun.svg";
+import moonIcon from "../../../assets/icons/icon-moon.png";
 
 function SwitcherTheme({ theme, toggleTheme }) {
   return (

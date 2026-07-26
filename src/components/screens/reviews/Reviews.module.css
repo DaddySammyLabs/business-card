@@ -1,0 +1,208 @@
+/* src/styles/Review.css */
+
+.reviewBlock {
+  margin: 80px 0px;
+  /* height: 580px; */
+  height: auto;
+  background-color: #4824ff;
+  border-radius: 28px;
+  /* padding: 20px; */
+}
+
+.reviewBlock h1 {
+  color: #fff;
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.description {
+  color: #fff;
+  text-align: center;
+  /* margin-top: -12px; */
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+.selecting {
+  background-color: #fff;
+  color: #000;
+  margin: 0 8px;
+}
+
+.carusel {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 81vw;
+  /* width: 1269px; */
+}
+
+.container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.next {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #8f7de9;
+
+  cursor: pointer;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 20px 10px;
+}
+
+.next:hover {
+  background-color: #00000050;
+}
+
+/* components/Review.jsx || ReviewItem.jsx */
+.reviewCard h2 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-top: 1vw;
+  margin-bottom: 0.2vw;
+  color: #000;
+  color: #13006e;
+}
+
+.reviewCard {
+  min-width: 27vw;
+  /* min-width: 420px; */
+}
+
+.content {
+  height: 230px;
+  width: 360px;
+
+  padding: 10px 20px 0 30px;
+
+  background-color: #fff;
+  border-radius: 24px;
+  margin: 10px 18px;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.wrapper {
+  display: flex;
+  place-items: center;
+}
+
+.wrapper h2 {
+  font-weight: 500;
+  margin-top: 1vw;
+  margin-bottom: 0.2vw;
+  color: #13006e;
+  width: 90%;
+}
+
+/* .reviewBlock  */
+.text {
+  color: #3f3282;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 3px;
+}
+.link {
+  display: flex;
+  position: rigth;
+  height: 40px;
+  width: 80px;
+  background-color: #000;
+  border-radius: 24px;
+  cursor: pointer;
+  border: 2px solid #000;
+  transition: 0.5s ease-in-out;
+}
+.link:hover {
+  border: 2px double #4824ff;
+  filter: drop-shadow(0px 0px 25px #4824ff90);
+}
+
+.telegramIcon {
+  margin: -7px -4px;
+  padding: 0;
+  position: relative;
+  /* content: url(/public/icons/telegram.svg); */
+  height: 42px;
+  scale: 0.84;
+  top: 4px;
+  left: 2px;
+  color: #fff;
+}
+
+/* .review-block .array-corner-icon { */
+.linkIcon {
+  margin: -6px -18px;
+  padding: 0;
+  position: relative;
+  /* content: url(/public/icons/link.svg); */
+  height: 42px;
+  scale: 0.68;
+  top: 4px;
+  right: -14px;
+
+  color: #fff;
+  font-size: 30px;
+}
+
+/* adaptive */
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+}
+@media (min-width: 412px) {
+}
+@media (min-width: 500px) {
+}
+@media (min-width: 768px) {
+  .content {
+    width: 330px;
+  }
+}
+
+@media (min-width: 900px) {
+  .content {
+    width: 360px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    width: 330px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content {
+    width: 360px;
+  }
+  .carusel {
+    max-width: 1200px;
+  }
+}
