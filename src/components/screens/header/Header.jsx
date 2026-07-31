@@ -2,9 +2,11 @@
 
 import useResize from "@/hooks/Resize";
 
-import Icon from "../ui/icons/Icon";
-import SwitcherTheme from "../ui/theme/SwitcherTheme";
-import LanguageSwitcher from "../languages/LanguageSwitcher";
+import Icon from "@/components/ui/icons/Icon";
+import SwitcherTheme from "@/components/ui/theme/SwitcherTheme";
+
+import LanguageSwitcher from "@/providers/languages/LanguageSwitcher";
+// import LanguageSwitcher from "@/providers/langs/lang-uzb/LangSwitcher";
 
 import HeaderMobile from "./header-mobile/HeaderMobile";
 

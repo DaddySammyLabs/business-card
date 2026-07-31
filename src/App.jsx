@@ -3,13 +3,12 @@ import "./assets/styles/App.css";
 
 import texts from "./constants/texts";
 
-import ModalWindow from "./components/modal/ModalWindow";
+import ModalWindow from "./components/ui/modal/ModalWindow";
 
-import Header from "./components/header/Header";
-import Hero from "./components/hero/Hero";
-import Services from "./components/services/Services";
-import Portfolio from "./components/picture/Portfolio";
-
+import Header from "./components/screens/header/Header";
+import Hero from "./components/screens/hero/Hero";
+import Services from "./components/screens/services/Services";
+import Portfolio from "./components/screens/portfolio/Portfolio";
 import ReviewCarusel from "./components/screens/reviews/ReviewCarusel";
 
 import Guarantees from "./components/Guarantees";

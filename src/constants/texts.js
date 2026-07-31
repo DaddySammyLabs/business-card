@@ -102,6 +102,58 @@ const texts = {
     category_empty: "Работы из этой категории пока не загружены",
     show_more: "Показать больше ⌄",
   },
+
+  uz: {
+    title: "Biznes karta",
+    about: "Men",
+    service: "Servislar",
+    portfolio: "Portfolio",
+    feed_back: "Baholar",
+    guarantee: "Guarantees",
+    contact: "Contact",
+
+    modalTitle: "Contacts",
+    close: "Close",
+    modalText: "You can contact me via Telegram ",
+    modalInstagram: "or Instagram👇",
+    show: "show",
+
+    instagram: "Instagram",
+    telegram: "Telegram",
+
+    hero_title: "Web Designer ",
+    author: "Daddy Sammy",
+    hero_subtitle_part2: "a marketable ",
+    hero_subtitle_part3: "and ",
+    hero_subtitle_part4: "unique design ",
+    hero_subtitle_part5: "to meet your needs",
+    hero_info: "I have been doing web design for 9 years",
+
+    Ido: "I create ",
+
+    service_info_part2: "a static design ",
+    service_info_part3: "in the following areas:",
+    banners: "Advertising banners",
+    preview_youtube: "Preview for YouTube videos",
+    design_youtube: "Design of YouTube channels",
+    infographics: "Infographics",
+    design_instagram: "Design an Instagram",
+    design_facebook: "Design an Facebook",
+    service_text_part1:
+      "Open for discussion of design creation in other areas. I am ready to discuss in more detail in ",
+    service_text_part2: "personal correspondence",
+
+    portfolio_part1: "Port",
+    portfolio_part2: "folio",
+    portfolioa_all: "All Projects",
+    port_banners: "Banners",
+    port_st_instagram: "Instagram Stories",
+    port_pre_youtube: "YouTube Previews",
+    port_des_youtube: "YouTube design",
+
+    category_empty: "Works from this category have not been uploaded yet",
+    show_more: "Show more ⌄",
+  },
 };
 
 export default texts;
