@@ -10,8 +10,7 @@ import Hero from "./components/screens/hero/Hero";
 import Services from "./components/screens/services/Services";
 import Portfolio from "./components/screens/portfolio/Portfolio";
 import ReviewCarusel from "./components/screens/reviews/ReviewCarusel";
-
-import Guarantees from "./components/Guarantees";
+import Guarantees from "./components/screens/guarantee/Guarantees";
 
 function App() {
   const {

@@ -1,12 +1,11 @@
 import "./Hero.css";
-
 import useResize from "@/hooks/Resize";
+import heroimage from "@/assets/images/Sun_moon-pana.png";
 
 import HeroMobile from "./hero-mobile/HeroMobile";
 
-import heroimage from "@/assets/images/Sun_moon-pana.png";
-
-import Animation from "@/components/animation/AnimationHoverResponsive";
+// import Animation from "@/components/animation/AnimationHoverResponsive";
+import Animation from "@/components/ui/animation/AnimationHoverResponsive";
 
 // import ThemeSwitcher from "../components/theme/ThemeSwitcher";
 

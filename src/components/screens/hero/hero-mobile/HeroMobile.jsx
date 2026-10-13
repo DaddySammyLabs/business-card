@@ -3,7 +3,8 @@ import React from "react";
 import styles from "./HeroMobile.module.css";
 
 import heroimage from "@/assets/images/Sun_moon-pana.png";
-import Animation from "@/components/animation/AnimationHoverResponsive";
+// import Animation from "@/components/animation/AnimationHoverResponsive";
+import Animation from "@/components/ui/animation/AnimationHoverResponsive";
 
 const HeroMobile = ({ texts }) => {
   return (
