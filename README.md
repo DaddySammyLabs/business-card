@@ -6,9 +6,9 @@ A multilingual Business Card website featuring a photo gallery, interactive navi
 
 ## 🚀 Live Demo
 
-**Live Demo**: [Wedding Invitation URL](https://wedding-invitation-nu-blue-84.vercel.app/)
+**Live Demo**: [Business Card URL](https://business-card-psi-gilt.vercel.app/)
 
-Repository: [GitHub repository URL](https://github.com/DaddySammyLabs/invitation-wedding-pink)
+Repository: [GitHub repository URL](https://github.com/DaddySammyLabs/business-card)
 
 ## Основные возможности проекта
 
