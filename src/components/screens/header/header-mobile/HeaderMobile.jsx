@@ -1,66 +1,35 @@
-import useModal from "@/hooks/useModal";
+import styles from "./HeaderMobile.module.css";
+import { useApp } from "@/context/AppContext";
 
 import Icon from "@/components/ui/icons/Icon";
-
 import SwitcherTheme from "@/components/ui/theme/SwitcherTheme";
-
-// import ModalMenu from "@/components/modal/modal-menu/ModalMenu";
 import ModalMenu from "@/components/ui/modal/modal-menu/ModalMenu";
+import HeaderNavigate from "@/components/ui/navigation/Navigation";
+import NavbarButton from "@/components/ui/buttons/navbar-button/NavbarButton";
 
-import "./HeaderMobile.css";
-
-function HeaderMobile({
-  texts,
-  theme,
-  toggleTheme,
-  language,
-  setLanguage,
-  upButton,
-  toBlock,
-}) {
-  const { isOpen, open, close } = useModal();
+function HeaderMobile({ texts }) {
+  const { theme } = useApp();
 
   return (
     <>
-      <nav className="header-mobile">
-        <SwitcherTheme theme={theme} toggleTheme={toggleTheme} />
+      <nav className={styles.headerMobile}>
+        <SwitcherTheme />
 
         <Icon
           title={texts.instagram}
-          image={
-            theme === "light"
-              ? "/icons/dark_instagram.svg"
-              : "/icons/instagram.svg"
-          }
-          link="https://www.instagram.com/smashkarimov/"
+          image={theme === "light" ? "dark_instagram.svg" : "instagram.svg"}
+          link={"https://www.instagram.com/smashkarimov/"}
         />
-
         <Icon
+          image={theme === "light" ? "dark_telegram.svg" : "telegram.svg"}
           title={texts.telegram}
-          image={
-            theme === "light"
-              ? "/icons/dark_telegram.svg"
-              : "/icons/telegram.svg"
-          }
-          link="https://t.me/TheDaddySammy"
+          link={"https://t.me/TheDaddySammy"}
         />
-
-        <span type="button" className="menu-header" onClick={open}>
-          <img
-            src={theme === "light" ? "/icons/bars_dark.svg" : "/icons/bars.svg"}
-            alt="menu-navbar"
-          />
-        </span>
+        <NavbarButton />
       </nav>
-      <ModalMenu
-        show={isOpen}
-        onClose={close}
-        texts={texts}
-        language={language}
-        setLanguage={setLanguage}
-        upButton={upButton}
-        toBlock={toBlock}
-      />
+      <ModalMenu texts={texts}>
+        <HeaderNavigate texts={texts} />
+      </ModalMenu>
     </>
   );
 }

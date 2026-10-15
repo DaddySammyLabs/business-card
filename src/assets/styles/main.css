@@ -40,7 +40,7 @@ ol {
 a {
   text-decoration: none;
   transition: all 500ms ease;
-  color: #765bff;
+  /* color: #765bff; */
 }
 
 /* form > input */

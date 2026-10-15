@@ -1,0 +1,63 @@
+@import "@/components/ui/theme/theme-colors.css";
+
+.navbar {
+  align-items: center;
+  height: 50px;
+  width: 80vw;
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 400px;
+  width: 51vw;
+}
+
+.navbar a {
+  color: var(--text-color);
+}
+
+.navbar a:hover {
+  color: #7b68ee;
+}
+
+/* .navbar a:hover, */
+.navbarMobile a:hover {
+  border: #7b68ee 1px solid;
+  border-radius: 5px;
+  padding: 2px 0;
+  text-shadow: 0 0 30px #5838f8;
+}
+
+@media (min-width: 900px) {
+  .navbar {
+    width: 44vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    width: 600px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile < 768px */
+
+.navbarMobile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navbarMobile a {
+  color: #120168;
+}
+
+.menu {
+  width: 40px;
+}
+.menu img {
+  width: 100%;
+}

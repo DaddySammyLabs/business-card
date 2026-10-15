@@ -1,50 +1,25 @@
 /* src/components/modal/ModalWindow.jsx */
-
-import React, { useState, useCallback, useEffect } from "react";
-
-import useResize from "@/hooks/Resize";
+import { useApp } from "@/context/AppContext";
 
 import "./ModalWindow.css";
+import styles from "./ModalWindow.module.css";
 
-function ModalWindow({ show, onClose, children, texts }) {
-  const [isVisible, setIsVisible] = useState(show);
-  const isMobile = useResize();
+function ModalWindow({ children, texts }) {
+  const { isOpenModal, openModal, closeModal, theme, isMobile } = useApp();
 
-  const handleKeyDown = useCallback(
-    (event) => {
-      if (event.key === "Escape") {
-        onClose();
-      }
-    },
-    [onClose],
-  );
+  // const [isVisible, setIsVisible] = useState(isOpen);
 
-  useEffect(() => {
-    if (show) {
-      setIsVisible(true);
-
-      document.addEventListener("keydown", handleKeyDown);
-    } else {
-      const timer = setTimeout(() => {
-        setIsVisible(false);
-      }, 500);
-
-      return () => clearTimeout(timer);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [show, handleKeyDown]);
-
-  if (!isVisible) return null;
+  // if (!isVisible) return null;
 
   return (
-    <div className={`modal-backdrop ${show ? "show" : ""}`} onClick={onClose}>
+    <div
+      className={`modal-backdrop ${isOpenModal ? "show" : ""}`}
+      onClick={closeModal}
+    >
       <div style={{ scale: isMobile ? "0.7" : "1" }}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <button
-            onClick={onClose}
+            onClick={closeModal}
             className="modal-close-button"
             aria-label="Close modal"
           />

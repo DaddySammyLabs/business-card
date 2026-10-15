@@ -1,5 +1,7 @@
-import useAppState from "./useAppState";
+// import useAppState from "./useAppState";
+import { useApp } from "./context/AppContext";
 import "./assets/styles/App.css";
+import styles from "./assets/styles/App.module.css";
 
 import texts from "./constants/texts";
 
@@ -13,58 +15,28 @@ import ReviewCarusel from "./components/screens/reviews/ReviewCarusel";
 import Guarantees from "./components/screens/guarantee/Guarantees";
 
 function App() {
-  const {
-    language,
-    setLanguage,
-    theme,
-    toggleTheme,
-    isOpen,
-    open,
-    close,
-    isMobile,
-
-    scroll,
-    upButton,
-    toBlock,
-  } = useAppState();
+  const { language, isMobile } = useApp();
 
   return (
     <>
       <div className="apps">
-        <Header
-          texts={texts[language]}
-          openModal={open}
-          language={language}
-          setLanguage={setLanguage}
-          upButton={upButton}
-          toBlock={toBlock}
-          theme={theme}
-          toggleTheme={toggleTheme}
-        />
+        <Header texts={texts[language]} />
+
         <div className="container">
           <Hero texts={texts[language]} />
         </div>
-        <Services theme={theme} texts={texts[language]} openModal={open} />
-        <Portfolio texts={texts[language]} />
-        <div className="container">
-          <ReviewCarusel texts={texts[language]} language={language} />
 
-          <Guarantees
-            upButton={upButton}
-            scroll={scroll}
-            texts={texts[language]}
-            language={language}
-            theme={theme}
-          />
+        <Services texts={texts[language]} />
+        <Portfolio texts={texts[language]} />
+
+        <div className="container">
+          <ReviewCarusel texts={texts[language]} />
+
+          <Guarantees texts={texts[language]} />
         </div>
       </div>
       {/* <ModalWindow theme={theme} show={isOpen} onClose={close} texts={texts}> */}
-      <ModalWindow
-        theme={theme}
-        show={isOpen}
-        onClose={close}
-        texts={texts[language]}
-      >
+      <ModalWindow texts={texts[language]}>
         <div className="modal-window">
           <h2
             style={{

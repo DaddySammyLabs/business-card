@@ -1,11 +1,13 @@
 /* src/components/theme/SwitcherTheme.jsx */
+import { useApp } from "@/context/AppContext";
 
 import "./SwitcherTheme.css";
 
 import sunIcon from "../../../assets/icons/icon-sun.svg";
 import moonIcon from "../../../assets/icons/icon-moon.png";
 
-function SwitcherTheme({ theme, toggleTheme }) {
+function SwitcherTheme({}) {
+  const { theme, toggleTheme } = useApp();
   return (
     <>
       <div className="switch-theme theme-mobile" onClick={toggleTheme}>

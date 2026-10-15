@@ -1,6 +1,6 @@
 import { useLayoutEffect, useEffect, useState } from "react";
 
-function useTheme(defaultTheme = "light") {
+function useTheme(defaultTheme = "dark") {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || defaultTheme,
   );

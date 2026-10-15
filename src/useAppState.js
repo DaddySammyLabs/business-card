@@ -1,76 +1,30 @@
 import { useEffect, useState } from "react";
 
-// import { useAutoAnimate } from "@formkit/auto-animate/react";
-// const [parent] = useAutoAnimate();
-// ref={parent}
-
 import useLanguage from "./hooks/useLanguage";
 import useTheme from "./hooks/useTheme";
 import useModal from "./hooks/useModal";
 import useResize from "./hooks/Resize";
+import useScroll from "./hooks/useScroll";
 
 const useAppState = () => {
   const { language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
-  const { isOpen, open, close } = useModal();
+  const { isOpen, open, close } = useModal(false, true);
+
+  const {
+    isOpen: isOpenModal,
+    open: openModal,
+    close: closeModal,
+  } = useModal(false, true);
+
+  const {
+    isOpen: isOpenNavbar,
+    open: openNavbar,
+    close: closeNavbar,
+  } = useModal(false, true);
+
+  const { scroll, upButton, toBlock } = useScroll();
   const isMobile = useResize();
-
-  const [scroll, setScroll] = useState(0);
-  const scrollUp = () => {
-    setScroll(window.scrollX);
-  };
-
-  const upButton = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  };
-
-  //   const upButton = () => {
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-  //   };
-
-  //   const upButton = useCallback(() => {
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-  //   }, []);
-
-  useState(() => {
-    window.addEventListener("scroll", scrollUp);
-  }, []);
-
-  const toBlock = (height) => {
-    window.scrollTo({ top: height, left: 0, behavior: "smooth" });
-  };
-  //   const toBlock = (top) => {
-  //     window.scrollTo({
-  //       top,
-  //       behavior: "smooth",
-  //     });
-  //   };
-
-  //   const toBlock = useCallback((top) => {
-  //     window.scrollTo({
-  //       top,
-  //       behavior: "smooth",
-  //     });
-  //   }, []);
-
-  useEffect(() => {
-    const handleScroll = () => setScroll(window.scrollY);
-
-    window.addEventListener("scroll", handleScroll);
-
-    // cleanup
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // onClick={upButton}
-  // onClick={(e) => toBlock(e.target.getAttribute("heigh"))}
-  // heigh="700"
 
   return {
     language,
@@ -81,6 +35,15 @@ const useAppState = () => {
     isOpen,
     open,
     close,
+
+    isOpenModal,
+    openModal,
+    closeModal,
+
+    isOpenNavbar,
+    openNavbar,
+    closeNavbar,
+
     isMobile,
 
     scroll,

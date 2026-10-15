@@ -1,31 +1,34 @@
 import { useEffect, useCallback, useState } from "react";
+import { useApp } from "@/context/AppContext";
 
-import "./ModalMenu.css";
+import styles from "./ModalMenu.module.css";
 
-import LanguageSwitcher from "@/providers/languages/LanguageSwitcher";
+// import LanguageSwitcher from "@/providers/languages/LanguageSwitcher";
+import LanguageSwitcher from "@/providers/langs/lang-uzb/LangSwitcher";
 
-function ModalMenu({
-  show,
-  onClose,
-  texts,
-  language,
-  setLanguage,
-  upButton,
-  toBlock,
-}) {
-  const [isMounted, setIsMounted] = useState(show);
+function ModalMenu({ children }) {
+  const {
+    language,
+    setLanguage,
+    isMobile,
+    isOpenNavbar,
+    openNavbar,
+    closeNavbar,
+  } = useApp();
+
+  const [isMounted, setIsMounted] = useState(isOpenNavbar);
 
   const handleKeyDown = useCallback(
     (event) => {
       if (event.key === "Escape") {
-        onClose();
+        closeNavbar();
       }
     },
-    [onClose],
+    [closeNavbar],
   );
 
   useEffect(() => {
-    if (show) {
+    if (isOpenNavbar) {
       setIsMounted(true);
       document.addEventListener("keydown", handleKeyDown);
     } else {
@@ -39,74 +42,31 @@ function ModalMenu({
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [show, handleKeyDown]);
+  }, [isOpenNavbar, handleKeyDown]);
 
   if (!isMounted) return null;
 
   const handleLinkClick = (callback) => {
     callback();
-    onClose();
+    closeNavbar();
   };
 
   return (
-    <div className={`menu-overlay ${show ? "show" : ""}`} onClick={onClose}>
+    <div
+      className={`${styles.overlay} ${isOpenNavbar ? "show" : ""}`}
+      onClick={closeNavbar}
+    >
       <aside
-        className={`menu-panel ${show ? "open" : "close"}`}
+        className={`${styles.panel} ${!isMobile ? styles.panelVertical : ""}  ${isOpenNavbar ? styles.open : styles.close}`}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* <button
-          className="menu-close"
-          onClick={onClose}
-          aria-label="close menu"
-        /> */}
-
-        <div className="menu-language">
-          <LanguageSwitcher language={language} setLanguage={setLanguage} />
+        <div
+          className={`${styles.languages} ${!isMobile ? styles.langVertical : ""}`}
+        >
+          <LanguageSwitcher />
         </div>
 
-        <ul className="menu-list">
-          <li>
-            <a href="#about" onClick={() => handleLinkClick(upButton)}>
-              {texts.about}
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#service"
-              onClick={() => handleLinkClick(() => toBlock(600))}
-            >
-              {texts.service}
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#portfolio"
-              onClick={() => handleLinkClick(() => toBlock(1200))}
-            >
-              {texts.portfolio}
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#feed_back"
-              onClick={() => handleLinkClick(() => toBlock(1900))}
-            >
-              {texts.feed_back}
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#guarantee"
-              onClick={() => handleLinkClick(() => toBlock(2800))}
-            >
-              {texts.guarantee}
-            </a>
-          </li>
-        </ul>
+        <div>{children}</div>
       </aside>
     </div>
   );

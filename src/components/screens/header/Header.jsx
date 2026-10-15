@@ -1,81 +1,28 @@
-// import { useEffect, useState } from "react";
-
-import useResize from "@/hooks/Resize";
-
-import Icon from "@/components/ui/icons/Icon";
-import SwitcherTheme from "@/components/ui/theme/SwitcherTheme";
-
-import LanguageSwitcher from "@/providers/languages/LanguageSwitcher";
-// import LanguageSwitcher from "@/providers/langs/lang-uzb/LangSwitcher";
+import styles from "./Header.module.css";
+import { useApp } from "@/context/AppContext";
 
 import HeaderMobile from "./header-mobile/HeaderMobile";
 
-import "./Header.css";
+import Icon from "@/components/ui/icons/Icon";
+import HeaderNavigation from "../../ui/navigation/Navigation";
+import SwitcherTheme from "@/components/ui/theme/SwitcherTheme";
+import ModalMenu from "@/components/ui/modal/modal-menu/ModalMenu";
+import NavbarButton from "@/components/ui/buttons/navbar-button/NavbarButton";
 
-function Header({
-  texts,
-  openModal,
-  theme,
-  toggleTheme,
-  language,
-  setLanguage,
-  upButton,
-  toBlock,
-}) {
-  const isMobile = useResize();
-  // const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth < 768);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
+function Header({ texts }) {
+  const { openModal, theme, isMobile } = useApp();
 
   return (
     <>
-      <header className="header">
+      <header className={styles.header}>
         {!isMobile ? (
-          <div className="header-inner">
-            <nav className="navbar">
-              <ul className="navbar-list">
-                <li>
-                  <a onClick={upButton} href="#about">
-                    {texts.about}
-                  </a>
-                </li>
-                <li>
-                  <a onClick={() => toBlock(600)} href="#service">
-                    {texts.service}
-                  </a>
-                </li>
-                <li>
-                  <a onClick={() => toBlock(1200)} href="#portfolio">
-                    {texts.portfolio}
-                  </a>
-                </li>
-                <li>
-                  <a onClick={() => toBlock(1900)} href="#feed_back">
-                    {texts.feed_back}
-                  </a>
-                </li>
-                <li>
-                  <a onClick={() => toBlock(2800)} href="#guarantee">
-                    {texts.guarantee}
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          <div className={styles.headerInner}>
+            <HeaderNavigation texts={texts} />
 
-            <div className="socials-header">
+            <div className={styles.socials}>
               <button
                 onClick={openModal}
-                className="header-button"
+                className={styles.contact}
                 type="button"
               >
                 {texts.contact}
@@ -83,36 +30,24 @@ function Header({
               <Icon
                 title={texts.instagram}
                 image={
-                  theme === "light"
-                    ? "/icons/dark_instagram.svg"
-                    : "/icons/instagram.svg"
+                  theme === "light" ? "dark_instagram.svg" : "instagram.svg"
                 }
                 link={"https://www.instagram.com/smashkarimov/"}
               />
               <Icon
-                image={
-                  theme === "light"
-                    ? "/icons/dark_telegram.svg"
-                    : "/icons/telegram.svg"
-                }
+                image={theme === "light" ? "dark_telegram.svg" : "telegram.svg"}
                 title={texts.telegram}
                 link={"https://t.me/TheDaddySammy"}
               />
 
-              <SwitcherTheme theme={theme} toggleTheme={toggleTheme} />
-              <LanguageSwitcher language={language} setLanguage={setLanguage} />
+              <SwitcherTheme />
+              <NavbarButton />
+
+              <ModalMenu texts={texts} />
             </div>
           </div>
         ) : (
-          <HeaderMobile
-            texts={texts}
-            theme={theme}
-            toggleTheme={toggleTheme}
-            language={language}
-            setLanguage={setLanguage}
-            upButton={upButton}
-            toBlock={toBlock}
-          />
+          <HeaderMobile texts={texts} />
         )}
       </header>
     </>

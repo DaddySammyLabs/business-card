@@ -1,18 +1,18 @@
 /* src/components/icons/Icon.jsx */
 
-import "./Icon.css";
+import styles from "./Icon.module.css";
 
 function IconImg({ title, link, image }) {
   return (
     <>
       <a
         // className={`icon-link ${theme === "light" ? "icon-dark" : "icon-light"}`}
-        className="icon-link icon-link-mobile"
+        className={styles.icon}
         href={link}
         target="_blank"
         rel="noreferrer"
       >
-        <img src={image} alt={title} />
+        <img src={`/icons/${image}`} alt={title} />
       </a>
     </>
   );

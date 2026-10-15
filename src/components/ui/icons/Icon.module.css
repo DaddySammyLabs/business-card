@@ -1,7 +1,7 @@
 /* src/components/icons/Icon.css */
 @import "../theme/theme-colors.css";
 
-.icon-link {
+.icon {
   width: 2.3em;
   height: 2.3em;
   display: flex;
@@ -10,7 +10,7 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.icon-link img {
+.icon img {
   width: 100%;
   border-radius: 10px;
   transition: 0.3s;
@@ -22,7 +22,7 @@
   filter: invert(1);
 } */
 
-.icon-link img:hover {
+.icon img:hover {
   /* background: #4824ff; */
   box-shadow:
     0 0 10px #4824ff,
@@ -44,7 +44,7 @@
     width: 38px;
     height: 38px;
   } */
-  .icon-link img {
+  .icon img {
     /* width: 40px; */
     /* height: 40px; */
     width: 100%;
@@ -61,14 +61,14 @@
 }
 
 @media (min-width: 1224px) {
-  .icon-link {
+  .icon {
     width: 2.5em;
     height: 2.5em;
   }
 }
 
 @media (min-width: 1440px) {
-  .icon-link {
+  .icon {
     width: 44px;
     height: 44px;
   }

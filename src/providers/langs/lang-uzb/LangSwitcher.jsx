@@ -1,10 +1,14 @@
 // src/components/languages/LangSwitcher.jsx
+import { useApp } from "@/context/AppContext";
 
 import styles from "./LangSwitcher.module.css";
 
-const LanguageSwitcher = ({ language, setLanguage }) => {
+const LanguageSwitcher = () => {
+  const { language, setLanguage, isMobile } = useApp();
   return (
-    <div className={`${styles.languageSwitcher} ${styles.langSwitherMobile}`}>
+    <div
+      className={`${styles.languageSwitcher} ${!isMobile ? styles.langsVertical : ""} ${styles.langSwitherMobile}`}
+    >
       <button
         className={language === "uz" ? styles.active : ""}
         onClick={() => setLanguage("uz")}

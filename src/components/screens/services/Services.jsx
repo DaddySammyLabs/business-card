@@ -1,13 +1,11 @@
 /* src/components/screens/services/Services.jsx */
+import { useApp } from "@/context/AppContext";
 import "./Services.css";
 
-// import useModal from "@/hooks/useModal";
-// import ModalWindow from "@/components/ui/modal/ModalWindow";
 import Tag from "./Tag";
 
-function Services({ theme, texts, openModal }) {
-  // const { isOpen, open, close } = useModal();
-
+function Services({ texts }) {
+  const { openModal, theme } = useApp();
   return (
     <>
       <div className="wrapper-service" draggable={false}>

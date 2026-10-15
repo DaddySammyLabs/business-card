@@ -1,4 +1,6 @@
 /* src/components/screens/reviews/ReviewCarusel.jsx */
+import { useApp } from "@/context/AppContext";
+
 import useCarousel from "./useReviews";
 import { reviews } from "./reviews.data";
 import styles from "./Reviews.module.css";
@@ -6,7 +8,9 @@ import Review from "./Review";
 
 import useResize from "@/hooks/Resize";
 
-const ReviewCarusel = ({ texts, language = "ru" }) => {
+const ReviewCarusel = ({ texts }) => {
+  const { language = "ru" } = useApp();
+
   const isMobile = useResize();
 
   const { containerRef, cardRef, carouselReviews, prevReview, nextReview } =

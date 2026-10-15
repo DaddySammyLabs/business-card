@@ -13,20 +13,26 @@
 
 .languageSwitcher {
   display: flex;
+  gap: 2px;
+}
+
+.langsVertical {
   flex-direction: column;
-  row-gap: 3px;
+  position: absolute;
+  top: -7px;
+  right: -30px;
 }
 
 .languageSwitcher button {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  padding: 5px 10px;
+  padding: 2px 5px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
   transition: all 0.3s ease;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .languageSwitcher button:hover {
@@ -47,9 +53,13 @@
 }
 
 .languageSwitcher button.active {
-  background-color: #4824ff;
+  /* background-color: #4824ff;
   color: #fff;
-  border-color: #4824ff;
+  border-color: #4824ff; */
+
+  background-color: #ffc107;
+  color: #000;
+  border-color: #ffc107;
 }
 
 /* adaptive */

@@ -1,9 +1,12 @@
 import React from "react";
+import { useApp } from "@/context/AppContext";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import "./Guarantees.css";
 
-function Guarantees({ upButton, scroll, theme, texts, language = "ru" }) {
+function Guarantees({ texts }) {
+  const { upButton, scroll, theme, language = "ru" } = useApp();
+
   const [parent] = useAutoAnimate();
 
   return (

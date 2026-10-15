@@ -1,43 +1,44 @@
-//   src//hooks/useModal.js
+// src/hooks/useModal.js
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 
-export function useModal() {
-  const [isOpen, setIsOpen] = useState(false);
+const useModal = (initialValue = false, closeOnEscape = false) => {
+  const [isOpen, setIsOpen] = useState(initialValue);
 
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
+  const open = useCallback(() => {
+    setIsOpen(true);
+  }, []);
+
+  const close = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  const toggle = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen || !closeOnEscape) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        close();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, closeOnEscape, close]);
 
   return {
     isOpen,
     open,
     close,
+    toggle,
   };
-}
+};
 
 export default useModal;
-
-// toUse: 1-import, 2-cont, 3-comp, 4-pros
-
-// 1-import texts + useModal + ModalWindow
-// import useModal from "../hooks/useModal";
-// import ModalWindow from "../components/ModalWindow";
-
-// 2-set-variable
-// const { isOpen, open, close } = useModal();
-
-// 3-use-in-component
-// <>
-//     <button onClick={open} className="header-button" type="button">
-//         {texts.contact}
-//     </button>
-
-//     <ModalWindow show={isOpen} onClose={close} texts={texts} />
-
-//     <ModalWindow show={isOpen} onClose={close} texts={texts}>
-//       <div className="modal-window">
-//         <h2 className="modal-title">{texts.modalTitle}</h2>
-//         <p className="modal-text">{texts.modalText}</p>
-//       </div>
-//     </ModalWindow>
-// </>;
