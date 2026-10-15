@@ -26,6 +26,13 @@ Repository: [GitHub repository URL](https://github.com/DaddySammyLabs/business-c
 
 🖥️ Server integration — отправка информации о гостях, ответов RSVP и пожеланий на сервер.
 
+## 📸 Preview
+
+![Business Card](src/assets/images/businessCard-screenshot_desc.png)
+![Business Card](src/assets/images/businessCard-screenshot_desc2.png)
+
+![Mobile Business Card](src/assets/images/businessCard-screenshot_mibile.png)
+
 ## 📱 Mobile App
 
 The project also includes a dedicated mobile version of the sneaker store.
@@ -59,13 +66,6 @@ The mobile version was created to practice building a consistent user experience
 📐 Adaptive layouts for different screen sizes
 
 The mobile version focuses on maintaining the same core shopping flow as the web application while adapting navigation, layouts, and interactions to smaller screens.
-
-## 📸 Preview
-
-![Business Card](src/assets/images/businessCard-screenshot_desc.png)
-![Business Card](src/assets/images/businessCard-screenshot_desc2.png)
-
-![Mobile Business Card](src/assets/images/businessCard-screenshot_mibile.png)
 
 ## ✨ Features
 
