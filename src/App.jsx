@@ -1,11 +1,9 @@
 // import useAppState from "./useAppState";
 import { useApp } from "./context/AppContext";
-import "./assets/styles/App.css";
 import styles from "./assets/styles/App.module.css";
 
 import texts from "./constants/texts";
-
-import ModalWindow from "./components/ui/modal/ModalWindow";
+import ModalWindow from "./components/ui/modal/modal-window/ModalWindow";
 
 import Header from "./components/screens/header/Header";
 import Hero from "./components/screens/hero/Hero";
@@ -35,23 +33,16 @@ function App() {
           <Guarantees texts={texts[language]} />
         </div>
       </div>
-      {/* <ModalWindow theme={theme} show={isOpen} onClose={close} texts={texts}> */}
+
       <ModalWindow texts={texts[language]}>
-        <div className="modal-window">
+        <div>
           <h2
-            style={{
-              marginBottom: isMobile && "10px",
-            }}
-            className="modal-title"
+            className={`${styles.modalTitle} ${isMobile ? styles.mobile_mb : ""}`}
           >
-            {" "}
             {texts[language].modalTitle}
           </h2>
           <p
-            style={{
-              fontSize: isMobile && "25px",
-            }}
-            className="modal-text"
+            className={`${styles.modalText} ${isMobile ? styles.mobile_textsize : ""}`}
           >
             {texts[language].modalText}
             <b>{texts[language].modalInstagram}</b>

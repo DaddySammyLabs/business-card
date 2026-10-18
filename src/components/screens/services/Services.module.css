@@ -1,7 +1,7 @@
 /* src/components/services/Services.css */
 @import "../../ui/theme/theme-colors.css";
 
-.wrapper-service {
+.wrapper {
   width: 98%;
   margin: 0 auto;
   background: var(--service-background);
@@ -18,7 +18,7 @@
   align-content: center;
 }
 
-.services .violet-text {
+.violetText {
   color: var(--title-color);
   cursor: pointer;
 }
@@ -33,13 +33,13 @@
   margin-bottom: 2%;
 }
 
-.tag-block {
+.tagBlock {
   display: flex;
   flex-wrap: wrap;
   /* margin: 2% 0; */
 }
 
-.services .tag {
+.tag {
   display: flex;
   font-size: 13px;
   font-size: 16px;
@@ -75,12 +75,12 @@
   .services {
     height: 440px;
   }
-  .tag-block {
+  .tagBlock {
     display: flex;
     flex-wrap: nowrap;
     margin: 0;
   }
-  .services .tag {
+  .tag {
     display: flex;
 
     align-items: center;
@@ -97,7 +97,7 @@
     padding-bottom: 10vw;
     align-content: center;
   }
-  .services .tag {
+  .tag {
     display: flex;
     font-size: 15px;
     margin: 0 12px 0 0;
@@ -111,14 +111,14 @@
     margin: 3% 0;
   }
 
-  .tag-block {
+  .tagBlock {
     display: flex;
     margin: 2% 0;
   }
 }
 
 @media (min-width: 1400px) {
-  .wrapper-service {
+  .wrapper {
     max-width: 1540px;
   }
   .services {
@@ -131,7 +131,7 @@
   .services p {
     font-size: 25px;
   }
-  .services .tag {
+  .tag {
     font-size: 18px;
   }
 }

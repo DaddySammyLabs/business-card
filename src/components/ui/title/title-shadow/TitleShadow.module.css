@@ -1,0 +1,162 @@
+@import "@/components/ui/theme/theme-colors.css";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vw;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: "Prata", serif;
+  font-size: 24px;
+  font-weight: 500;
+  background: linear-gradient(to right, var(--main-text-color), #4824ff);
+  color: transparent;
+  background-clip: text;
+}
+
+.icon {
+  margin: 0 5px;
+  width: 30px;
+  filter: drop-shadow(20px 20px 15px #4824ff25);
+}
+.titleBorder {
+  font-family: "Prata", serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--main-background);
+  margin: 10px 0;
+  text-shadow:
+    -1px -1px 0 var(--title-border-color),
+    1px -1px 0 var(--title-border-color),
+    -1px 1px 0 var(--title-border-color),
+    1px 1px 0 var(--title-border-color);
+}
+
+.titlePart1 {
+  position: absolute;
+  margin-left: -260px;
+  background: linear-gradient(to right, transparent, var(--title-border-color));
+  /* background-color: transparent; */
+}
+.titlePart2 {
+  position: absolute;
+  margin-left: 240px;
+  background: linear-gradient(to left, transparent, var(--title-border-color));
+}
+
+/* mobile */
+
+/* .mobileFirst {
+  margin-top: 10vw;
+} */
+
+/* .mobileTitle {
+  font-size: 28px;
+  margin-left: 3vw;
+  z-index: 1;
+} */
+
+/* .mobileIcon {
+  margin: 0 10px 4px 8px;
+  width: 45px;
+} */
+
+@media (min-width: 375px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .titleBorder {
+    font-size: 26px;
+  }
+
+  .titlePart1 {
+    margin-left: -280px;
+  }
+  .titlePart2 {
+    margin-left: 260px;
+  }
+}
+
+@media (min-width: 500px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .titleBorder {
+    font-size: 34px;
+  }
+
+  .titlePart1 {
+    margin-left: -360px;
+  }
+  .titlePart2 {
+    margin-left: 340px;
+  }
+}
+@media (min-width: 675px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .icon {
+    margin: 0 10px;
+  }
+
+  .titleBorder {
+    font-size: 40px;
+  }
+
+  .titlePart1 {
+    margin-left: -480px;
+  }
+  .titlePart2 {
+    margin-left: 430px;
+  }
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 46px;
+  }
+
+  .icon {
+    margin: 0 10px;
+    width: 45px;
+  }
+
+  .titleBorder {
+    font-size: 46px;
+  }
+
+  .titlePart1 {
+    margin-left: -500px;
+  }
+  .titlePart2 {
+    margin-left: 500px;
+  }
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 56px;
+  }
+  .icon {
+    width: 50px;
+  }
+  .titleBorder {
+    font-size: 56px;
+    margin: 10px 0;
+  }
+  .titlePart1 {
+    margin-left: -660px;
+  }
+  .titlePart2 {
+    margin-left: 660px;
+  }
+}

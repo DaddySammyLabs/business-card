@@ -1,7 +1,7 @@
 // src/components/pictures/carusel/Banners.jsx
 
 import React, { useState } from "react";
-import "./Banners.css";
+import styles from "./Banners.module.css";
 
 // Vite import всех картинок
 const imageModules = import.meta.glob(
@@ -32,14 +32,14 @@ const Banners = ({ texts }) => {
   };
 
   return (
-    <div className="banner-gallery">
-      <div className="image-grid">
+    <div className={styles.banners}>
+      <div className={styles.imageGrid}>
         {visibleImages.map((image, index) => (
           <img
             key={index}
             src={image}
             alt="banner"
-            className="banner-images"
+            className={styles.images}
             onClick={() => setSelectedImage(image)}
           />
         ))}
@@ -47,7 +47,7 @@ const Banners = ({ texts }) => {
 
       {visibleCount < imageBanners.length && (
         <button
-          className="show-more-images"
+          className={styles.showMore}
           onClick={showMoreImages}
           type="button"
         >
@@ -56,10 +56,14 @@ const Banners = ({ texts }) => {
       )}
 
       {selectedImage && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
-            <img src={selectedImage} alt="selected" className="modal-img" />
-            <button className="close-btn" onClick={closeModal}>
+        <div className={styles.modal} onClick={closeModal}>
+          <div className={styles.inner} onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedImage}
+              alt="selected"
+              className={styles.openImage}
+            />
+            <button className={styles.close} onClick={closeModal}>
               ✕
             </button>
           </div>

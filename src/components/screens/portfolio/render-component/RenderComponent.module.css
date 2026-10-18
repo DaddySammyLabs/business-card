@@ -1,0 +1,106 @@
+/* src/components/picture/Portfolio.css */
+@import "@/components/ui/theme/theme-colors.css";
+
+.categoryFilters {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  gap: 1%;
+}
+
+.category {
+  padding: 6px;
+  margin: 8px 8px 0 0;
+  border-radius: 24px;
+
+  border: 1px solid var(--elements-color);
+  width: 40%;
+
+  color: var(--title-color);
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.category:hover {
+  background: #4824ff;
+  color: #fff;
+  filter: drop-shadow(0px 0px 30px #4824ff25);
+}
+.selected {
+  background: var(--selected-tag-background);
+  color: #fff;
+  border: 1px solid #4824ff;
+}
+
+.galleryContent {
+  margin-left: 0;
+  font-size: 42px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* mobile */
+.filterScrollbar {
+  /* margin-left: -5vw; */
+  /* margin-right: -5vw; */
+  padding-left: 5vw;
+
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filterScrollbar::-webkit-scrollbar {
+  height: 0px;
+}
+
+/* adaptive */
+
+@media (min-width: 320px) {
+}
+@media (min-width: 375px) {
+  .galleryContent {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 412px) {
+  .category {
+    margin: 12px 12px 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .categoryFilters {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 900px) {
+}
+
+@media (min-width: 1024px) {
+  .categoryFilters {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1400px) {
+  .category {
+    font-size: 20px;
+  }
+
+  .galleryContent {
+    font-size: 52px;
+  }
+}

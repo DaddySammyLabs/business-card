@@ -1,0 +1,26 @@
+/* src/components/picture/Portfolio.css */
+@import "@/components/ui/theme/theme-colors.css";
+
+.portfolio {
+  height: auto;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 94%;
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    /* height: 500px; */
+    height: auto;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    width: 94%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .portfolio {
+    margin-bottom: 100px;
+    max-width: 1440px;
+  }
+}

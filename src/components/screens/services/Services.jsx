@@ -1,6 +1,6 @@
 /* src/components/screens/services/Services.jsx */
 import { useApp } from "@/context/AppContext";
-import "./Services.css";
+import styles from "./Services.module.css";
 
 import Tag from "./Tag";
 
@@ -8,8 +8,8 @@ function Services({ texts }) {
   const { openModal, theme } = useApp();
   return (
     <>
-      <div className="wrapper-service" draggable={false}>
-        <div className="services">
+      <div className={styles.wrapper} draggable={false}>
+        <div className={styles.services}>
           <div>
             <h1>{texts.service.toUpperCase()}</h1>
             <p>
@@ -17,7 +17,7 @@ function Services({ texts }) {
               <span className="violet-text">{texts.service_info_part2}</span>
               {texts.service_info_part3}
             </p>
-            <div className="tag-block">
+            <div className={styles.tagBlock}>
               <Tag
                 texts={texts}
                 tagTitle={texts.banners}
@@ -56,7 +56,7 @@ function Services({ texts }) {
                 }
               />
             </div>
-            <div className="tag-block">
+            <div className={styles.tagBlock}>
               <Tag
                 texts={texts}
                 tagTitle={texts.design_instagram}

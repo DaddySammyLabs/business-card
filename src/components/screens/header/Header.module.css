@@ -1,11 +1,10 @@
 /* src/styles/Header.css */
-/* @import "../../components/ui/theme/theme-colors.css"; */
 @import "@/components/ui/theme/theme-colors.css";
 
 .header {
   width: 100%;
   position: sticky;
-  /* backdrop-filter: blur(8px); */
+  backdrop-filter: blur(8px);
   /* background-color: var(--header-background); */
   transition: background-color 0.3s ease;
   z-index: 10;

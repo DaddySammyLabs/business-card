@@ -13,7 +13,7 @@
 // src/components/pictures/carusel/Banners.jsx
 
 import React, { useState } from "react";
-import "./Banners.css";
+import "../banners/Banners.css";
 
 // Vite import всех картинок
 const imageModules = import.meta.glob(

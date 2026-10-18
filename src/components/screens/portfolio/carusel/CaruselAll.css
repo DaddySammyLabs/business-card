@@ -1,5 +1,5 @@
 /* src/components/pictures/carusel/CaruselAll.css */
-@import "../../../ui/theme/theme-colors.css";
+@import "@/components/ui/theme/theme-colors.css";
 
 .carusel-container {
   display: flex;
@@ -99,13 +99,6 @@
   background: #fff;
 }
 
-.carousel-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  overflow: hidden;
-}
 /* 
 .carusel-container .image-close-button::before,
 .carusel-container .image-close-button::after {

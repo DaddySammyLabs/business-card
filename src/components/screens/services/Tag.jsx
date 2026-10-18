@@ -1,11 +1,11 @@
 /* src/components/screens/services/Tag.jsx */
 
-import "./Services.css";
+import styles from "./Services.module.css";
 
 function Tag({ tagTitle, checkIcon }) {
   return (
     <>
-      <span className="tag">
+      <span className={styles.tag}>
         <span className="tag-icon">
           <img src={checkIcon} alt={checkIcon} />
         </span>
