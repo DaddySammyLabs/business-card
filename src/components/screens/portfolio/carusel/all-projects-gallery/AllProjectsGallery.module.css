@@ -6,6 +6,6 @@
   overflow: hidden;
 }
 
-.carouselWrapper .mobile {
+.carouselWrapper.mobile {
   pointer-events: none;
 }

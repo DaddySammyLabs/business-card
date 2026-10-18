@@ -10,6 +10,7 @@ const AllProjectsGallery = () => {
   return (
     <div
       // style={{ pointerEvents: isMobile ? "none" : "" }}
+      // className={styles.carouselWrapper}
       className={`${styles.carouselWrapper} ${isMobile ? styles.mobile : ""}`}
     >
       <CaruselCorrect direction="left" />
