@@ -4,7 +4,7 @@ import { reviews } from "./reviews.data";
 import styles from "./Reviews.module.css";
 import Review from "./Review";
 
-import useResize from "@/hooks/Resize";
+import useResize from "@/hooks/useResize";
 
 const ReviewCarusel = () => {
   const isMobile = useResize();

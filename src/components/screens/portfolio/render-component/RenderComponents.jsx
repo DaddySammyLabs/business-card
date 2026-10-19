@@ -11,64 +11,51 @@ import YoutubeThumbnails from "@/components/screens/portfolio/carusel/youtube/Yo
 
 function RenderComponents({ texts }) {
   const { isMobile } = useApp();
-
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const renderComponent = () => {
-    switch (selectedCategory) {
-      case "All":
-        return <AllProjectsGallery texts={texts} />;
-      case "Banners":
-        return <Banners texts={texts} />;
-      case "InstagramStories":
-        return <InstagramStories texts={texts} />;
-      case "YoutubeDesign":
-        return <YoutubeDesign texts={texts} />;
-      case "YoutubeThumbnails":
-        return <YoutubeThumbnails texts={texts} />;
+  const categories = [
+    { id: "All", label: texts.portfolioa_all },
+    { id: "Banners", label: texts.port_banners },
+    { id: "InstagramStories", label: texts.port_st_instagram },
+    { id: "YoutubeDesign", label: texts.port_des_youtube },
+    { id: "YoutubeThumbnails", label: texts.port_pre_youtube },
+  ];
 
-      default:
-        return <AllProjectsGallery texts={texts} />;
-    }
+  const components = {
+    All: AllProjectsGallery,
+    Banners,
+    InstagramStories,
+    YoutubeDesign,
+    YoutubeThumbnails,
   };
+
+  const SelectedComponent = components[selectedCategory] || AllProjectsGallery;
 
   return (
     <>
-      <div className={`${isMobile ? styles.filterScrollbar : ""}`}>
+      <div className={isMobile ? styles.filterScrollbar : ""}>
         <div className={styles.categoryFilters}>
-          <p
-            className={`${styles.category} ${selectedCategory === "All" ? styles.selected : ""} ${isMobile ? "mobile" : ""}`}
-            onClick={() => setSelectedCategory("All")}
-          >
-            {texts.portfolioa_all}
-          </p>
-          <p
-            className={`${styles.category} ${selectedCategory === "Banners" ? styles.selected : ""} ${isMobile ? "mobile" : ""}`}
-            onClick={() => setSelectedCategory("Banners")}
-          >
-            {texts.port_banners}
-          </p>
-          <p
-            className={`${styles.category} ${selectedCategory === "InstagramStories" ? styles.selected : ""} ${isMobile ? "mobile" : ""}`}
-            onClick={() => setSelectedCategory("InstagramStories")}
-          >
-            {texts.port_st_instagram}
-          </p>
-          <p
-            className={`${styles.category} ${selectedCategory === "YoutubeDesign" ? styles.selected : ""} ${isMobile ? "mobile" : ""}`}
-            onClick={() => setSelectedCategory("YoutubeDesign")}
-          >
-            {texts.port_des_youtube}
-          </p>
-          <p
-            className={`${styles.category} ${selectedCategory === "YoutubeThumbnails" ? styles.selected : ""} ${isMobile ? "mobile" : ""}`}
-            onClick={() => setSelectedCategory("YoutubeThumbnails")}
-          >
-            {texts.port_pre_youtube}
-          </p>
+          {categories.map(({ id, label }) => (
+            <p
+              key={id}
+              className={[
+                styles.category,
+                selectedCategory === id && styles.selected,
+                isMobile && "mobile",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              onClick={() => setSelectedCategory(id)}
+            >
+              {label}
+            </p>
+          ))}
         </div>
       </div>
-      <div className={styles.galleryContent}>{renderComponent()}</div>
+
+      <div className={styles.galleryContent}>
+        <SelectedComponent texts={texts} />
+      </div>
     </>
   );
 }

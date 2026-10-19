@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import useLanguage from "./hooks/useLanguage";
 import useTheme from "./hooks/useTheme";
 import useModal from "./hooks/useModal";
-import useResize from "./hooks/Resize";
+import useResize from "./hooks/useResize";
 import useScroll from "./hooks/useScroll";
 
 const useAppState = () => {

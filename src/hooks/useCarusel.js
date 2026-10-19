@@ -1,47 +1,57 @@
-//  src/hooks/useCarusel.js
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 
-const useCarusel = ({ direction }) => {
+import { useEscapeKey } from "./useEscapeKey";
+
+const useCarusel = ({ images, direction = "left" }) => {
   const caruselRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
   const requestIdRef = useRef(null);
   const startPositionRef = useRef(0);
+
+  const [isPaused, setIsPaused] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setSelectedImage(null);
-  };
+  }, []);
+
+  useEscapeKey(Boolean(selectedImage), closeModal);
 
   useEffect(() => {
     const carusel = caruselRef.current;
 
-    if (!carusel) return;
+    if (!carusel || selectedImage || isPaused) return;
+
+    let animationId;
 
     const animate = () => {
-      if (isHovered) {
+      const maxScroll = carusel.scrollWidth / 2;
+
+      if (maxScroll > 0) {
         startPositionRef.current += direction === "left" ? -0.3 : 0.3;
 
-        if (startPositionRef.current >= carusel.scrollWidth / 2) {
+        if (startPositionRef.current >= maxScroll) {
           startPositionRef.current = 0;
         } else if (startPositionRef.current <= 0) {
-          startPositionRef.current = carusel.scrollWidth / 2;
+          startPositionRef.current = maxScroll;
         }
 
         carusel.scrollLeft = startPositionRef.current;
       }
 
-      requestIdRef.current = requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     };
 
-    requestIdRef.current = requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
 
-    return () => cancelAnimationFrame(requestIdRef.current);
-  }, [direction, isHovered]);
+    return () => {
+      cancelAnimationFrame(animationId);
+    };
+  }, [direction, isPaused, selectedImage]);
 
   return {
     caruselRef,
-    isHovered,
-    setIsHovered,
+    isPaused,
+    setIsPaused,
     selectedImage,
     setSelectedImage,
     closeModal,
@@ -49,45 +59,3 @@ const useCarusel = ({ direction }) => {
 };
 
 export default useCarusel;
-
-// // importAll - allCategories
-// import React, { useState, useRef, useEffect } from "react";
-
-// const importAll = (r) => r.keys().map(r);
-// const images = importAll(
-//   require.context("@/assets/images", false, /\.(png|jpe?g|svg)$/),
-// );
-
-// const useCarusel = ({ direction }) => {
-//   const caruselRef = useRef(null);
-//   const [isHovered, setIsHovered] = useState(false);
-//   const requestIdRef = useRef(null);
-//   const startPositionRef = useRef(0);
-//   const [selectedImage, setSelectedImage] = useState(null);
-
-//   const closeModal = () => {
-//     setSelectedImage(null);
-//   };
-
-//   useEffect(() => {
-//     const carusel = caruselRef.current;
-
-//     const animate = () => {
-//       if (isHovered) {
-//         startPositionRef.current += direction === "left" ? -0.3 : 0.3;
-//         if (startPositionRef.current >= carusel.scrollWidth / 2) {
-//           startPositionRef.current = 0;
-//         } else if (startPositionRef.current <= 0) {
-//           startPositionRef.current = carusel.scrollWidth / 2;
-//         }
-//         carusel.scrollWidth = startPositionRef.current;
-//       }
-//       requestIdRef.current = requestAnimationFrame(animate);
-//     };
-//     requestIdRef.current = requestAnimationFrame(animate);
-
-//     return () => cancelAnimationFrame(requestIdRef.current);
-//   }, [direction, isHovered]);
-// };
-
-// export default useCarusel;

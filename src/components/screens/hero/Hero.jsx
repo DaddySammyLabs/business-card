@@ -1,5 +1,5 @@
 import "./Hero.css";
-import useResize from "@/hooks/Resize";
+import useResize from "@/hooks/useResize";
 import heroimage from "@/assets/images/Sun_moon-pana.png";
 
 import HeroMobile from "./hero-mobile/HeroMobile";

@@ -80,7 +80,7 @@ function Services({ texts }) {
             <p>
               {texts.service_text_part1}
               {/* <span onClick={open} className="violet-text"> */}
-              <span onClick={openModal} className="violet-text">
+              <span onClick={openModal} className={styles.violetText}>
                 {texts.service_text_part2}
               </span>
               .

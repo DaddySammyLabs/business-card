@@ -1,6 +1,6 @@
 // src/components/pictures/carusel/Carusel.jsx
 import "./Carusel.css";
-import useCarusel from "@/hooks/useCarusel";
+import useCarusel from "@/hooks/useCarusel.onHover";
 
 const Carusel = () => {
   const { caruselRef, setIsHovered } = useCarusel({ direction: "left" });

@@ -2,19 +2,18 @@
 import { useApp } from "@/context/AppContext";
 
 import styles from "./AllProjectsGallery.module.css";
-import CaruselCorrect from "../CaruselCorrect";
+import Carusel from "../Carusel";
 
 const AllProjectsGallery = () => {
   const { isMobile } = useApp();
 
   return (
     <div
-      // style={{ pointerEvents: isMobile ? "none" : "" }}
-      // className={styles.carouselWrapper}
-      className={`${styles.carouselWrapper} ${isMobile ? styles.mobile : ""}`}
+      // className={`${styles.carouselWrapper} ${isMobile ? styles.mobile : ""}`}
+      className={`${styles.carouselWrapper} `}
     >
-      <CaruselCorrect direction="left" />
-      <CaruselCorrect direction="right" />
+      <Carusel direction="left" />
+      <Carusel direction="right" />
     </div>
   );
 };

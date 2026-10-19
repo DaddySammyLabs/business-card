@@ -68,7 +68,7 @@
   z-index: 1001;
 }
 .contentMobile {
-  scale: 0.8;
+  scale: 0.7;
 }
 
 .backdrop.show .content {
