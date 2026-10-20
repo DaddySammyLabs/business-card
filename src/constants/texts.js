@@ -4,7 +4,7 @@ const texts = {
     about: "About me",
     service: "Services",
     portfolio: "Portfolio",
-    feed_back: "Feed back",
+    feedback: "Feedback",
     guarantee: "Guarantees",
     contact: "Contact",
 
@@ -56,7 +56,7 @@ const texts = {
     about: "Обо мне",
     service: "Услуги",
     portfolio: "Портфолио",
-    feed_back: "Отзывы",
+    feedback: "Отзывы",
     guarantee: "Гарантии",
     contact: "Связаться",
 
@@ -108,8 +108,9 @@ const texts = {
     about: "Men",
     service: "Servislar",
     portfolio: "Portfolio",
-    feed_back: "Baholar",
-    guarantee: "Guarantees",
+    feedback: "Baholar",
+    guarantee: "Kafolat",
+
     contact: "Contact",
 
     modalTitle: "Contacts",

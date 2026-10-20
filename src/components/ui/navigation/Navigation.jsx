@@ -25,7 +25,7 @@ const Navigation = ({ texts }) => {
         </li>
         <li>
           <a onClick={() => toBlock(1900)} href="#feed_back">
-            {texts.feed_back}
+            {texts.feedback}
           </a>
         </li>
         <li>

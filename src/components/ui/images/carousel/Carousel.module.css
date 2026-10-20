@@ -1,0 +1,22 @@
+@import "@/components/ui/theme/theme-colors.css";
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+}
+
+.image {
+  width: auto;
+  height: 200px;
+  border-radius: 16px;
+  margin: 10px;
+}
+.image:hover {
+  cursor: pointer;
+}

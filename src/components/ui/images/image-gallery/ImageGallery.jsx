@@ -3,7 +3,7 @@ import styles from "./ImageGallery.module.css";
 import { useApp } from "@/context/AppContext";
 
 import { useImageGallery } from "@/hooks/useImageGallery";
-import ImageModal from "@/components/ui/modal/image-modal/ImageModal";
+import ImageModal from "@/components/ui/images/image-modal/ImageModal";
 import ShowMore from "@/components/ui/buttons/show-more-hide/showmore/ShowMore";
 
 const ImageGallery = ({ images = [], texts, alt = "image" }) => {

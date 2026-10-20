@@ -1,7 +1,7 @@
 import styles from "./Portfolio.module.css";
 
 import TitleShadow from "@/components/ui/title/title-shadow/TitleShadow";
-import RenderComponents from "./render-component/RenderComponents";
+import RenderComponents from "./render-gallery/RenderComponents";
 
 function Portfolio({ texts }) {
   return (

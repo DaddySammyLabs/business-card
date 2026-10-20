@@ -2,13 +2,11 @@
 .heroMobile {
   display: flex;
   flex-direction: column;
-  /* text-align: center; */
 }
 
 .info {
   align-content: center;
   text-align: center;
-
   width: 100%;
 }
 
@@ -99,19 +97,8 @@
   }
 }
 @media (min-width: 600px) {
-  .heroMobile {
-    display: flex;
+  /* .heroMobile {
     flex-direction: row;
-    justify-content: space-between;
     gap: 40px;
-  }
-
-  .info {
-    width: 40%;
-    text-align: inherit;
-  }
-
-  .info h3 {
-    width: 30vw;
-  }
+  } */
 }

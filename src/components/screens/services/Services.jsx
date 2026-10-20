@@ -14,7 +14,9 @@ function Services({ texts }) {
             <h1>{texts.service.toUpperCase()}</h1>
             <p>
               {texts.Ido}
-              <span className="violet-text">{texts.service_info_part2}</span>
+              <span className={styles.violetText}>
+                {texts.service_info_part2}
+              </span>
               {texts.service_info_part3}
             </p>
             <div className={styles.tagBlock}>
@@ -79,25 +81,14 @@ function Services({ texts }) {
 
             <p>
               {texts.service_text_part1}
-              {/* <span onClick={open} className="violet-text"> */}
               <span onClick={openModal} className={styles.violetText}>
                 {texts.service_text_part2}
               </span>
               .
             </p>
           </div>
-          {/* services-block */}
         </div>
       </div>
-      {/* <ModalWindow show={isOpen} onClose={close} texts={texts}>
-        <div className="modal-window">
-          <h2 className="modal-title">{texts.modalTitle}</h2>
-          <p className="modal-text">
-            {texts.modalText}
-            <b>{texts.modalInstagram}</b>
-          </p>
-        </div>
-      </ModalWindow> */}
     </>
   );
 }

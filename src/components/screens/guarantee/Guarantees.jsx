@@ -2,7 +2,7 @@ import React from "react";
 import { useApp } from "@/context/AppContext";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-import "./Guarantees.css";
+import styles from "./Guarantees.module.css";
 
 function Guarantees({ texts }) {
   const { upButton, scroll, theme, language = "ru" } = useApp();
@@ -11,11 +11,10 @@ function Guarantees({ texts }) {
 
   return (
     <>
-      <div ref={parent} className="guarantees-block">
-        <h1>{language === "ru" ? "ГАРАНТИИ" : "GUARANTEES"}</h1>
-        {/* <h1>{texts.guarantee.toUpperCase()}</h1> */}
+      <div ref={parent} className={styles.guarantees}>
+        <h1>{texts.guarantee.toUpperCase()}</h1>
 
-        <ol className="guarantee-info">
+        <ol className={styles.info}>
           <li>
             <img
               src={
@@ -27,8 +26,8 @@ function Guarantees({ texts }) {
             />
             <p>
               Оплату принимаю через платёжную систему
-              <span className="marked-text"> Payment-System-name</span>, которая
-              контролирует безопасность денежных передов.
+              <span className={styles.markedText}> Payment-System-name</span>,
+              которая контролирует безопасность денежных передов.
             </p>
           </li>
           <li>
@@ -42,8 +41,8 @@ function Guarantees({ texts }) {
             />
             <p>
               Убедится в моей ответственности и профессионализме можно
-              <span className="marked-text"> написав клиентам</span>, оставивших
-              (отзывы клиентов выше).
+              <span className={styles.markedText}> написав клиентам</span>,
+              оставивших (отзывы клиентов выше).
             </p>
           </li>
           <li>
@@ -56,8 +55,8 @@ function Guarantees({ texts }) {
               alt="checked"
             />
             <p>
-              Все<span className="marked-text"> авторские права</span> на работу
-              преходят заказчику после выполнения заказа.
+              Все<span className={styles.markedText}> авторские права</span> на
+              работу преходят заказчику после выполнения заказа.
             </p>
           </li>
           <li>
@@ -71,7 +70,7 @@ function Guarantees({ texts }) {
             />
             <p>
               В своих работах использую материалы строго
-              <span className="marked-text">
+              <span className={styles.markedText}>
                 {" "}
                 разрешенные для личного и коммерческого использования
               </span>
@@ -80,11 +79,11 @@ function Guarantees({ texts }) {
           </li>
         </ol>
       </div>
-      <hr className="line"></hr>
-      <div onClick={upButton} className="footer">
+      <hr className={styles.line}></hr>
+      <div onClick={upButton} className={styles.footer}>
         {texts.author}
       </div>
-      <div onClick={upButton} className={scroll < 1960 ? "" : "btn-up"}>
+      <div onClick={upButton} className={scroll < 1960 ? "" : styles.upButton}>
         <img src={"/icons/up.svg"} />
       </div>
     </>

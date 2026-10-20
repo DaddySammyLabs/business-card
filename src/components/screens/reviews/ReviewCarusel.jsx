@@ -18,7 +18,7 @@ const ReviewCarusel = ({ texts }) => {
 
   return (
     <section className={styles.reviewBlock}>
-      <h1>{language === "ru" ? "ОТЗЫВЫ" : "FEEDBACK"}</h1>
+      <h1>{texts.feedback.toUpperCase()}</h1>
 
       <p className={styles.description}>
         Отзывы клиентов, написанные со своих
