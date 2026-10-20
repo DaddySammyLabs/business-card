@@ -1,12 +1,11 @@
-import React from "react";
-
 import styles from "./HeroMobile.module.css";
+import { useApp } from "@/context/AppContext";
 
 import heroimage from "@/assets/images/Sun_moon-pana.png";
-// import Animation from "@/components/animation/AnimationHoverResponsive";
 import Animation from "@/components/ui/animation/AnimationHoverResponsive";
 
 const HeroMobile = ({ texts }) => {
+  const { openModal } = useApp();
   return (
     <>
       <div className={styles.heroMobile}>
@@ -30,7 +29,7 @@ const HeroMobile = ({ texts }) => {
             <br />
             {texts.hero_subtitle_part5}
           </h2>
-          <h3>{texts.hero_info}</h3>
+          <h3 onClick={openModal}>{texts.hero_info}</h3>
         </div>
       </div>
     </>
