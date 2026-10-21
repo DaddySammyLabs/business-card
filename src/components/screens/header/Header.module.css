@@ -114,14 +114,16 @@
 }
 
 @media (min-width: 1440px) {
-  .contact {
+  .header {
     flex-wrap: nowrap;
-    max-width: 1440px;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 
   .socials {
     justify-content: flex-end;
     width: 600px;
+    gap: 40px;
   }
   .contact {
     height: 55px;

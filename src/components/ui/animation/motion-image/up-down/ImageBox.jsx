@@ -2,7 +2,6 @@
 
 // import "./ImageBox.css";
 import "./ImageUpDown.css";
-// import "./ImageAnimation.css";
 // import hero from "../assets/images/hero.png";
 
 function ImageBox({ titleImage, number }) {

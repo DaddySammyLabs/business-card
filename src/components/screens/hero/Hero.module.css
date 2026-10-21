@@ -1,8 +1,8 @@
 /* .info-block {} */
-@import "../../ui/theme/theme-colors.css";
+@import "@/components/ui/theme/theme-colors.css";
 
 .hero {
-  margin-top: 100px;
+  margin-top: 70px;
   /* height: 600px; */
   height: auto;
   display: flex;
@@ -11,6 +11,11 @@
 
 .markedText {
   color: var(--title-color);
+}
+
+.info {
+  align-content: center;
+  width: 60%;
 }
 
 .info h1 {
@@ -69,10 +74,6 @@
   overflow: hidden;
 }
 
-/* .hero .info-block h3:hover {
-  filter: drop-shadow(0px 0px 35px #4824ff);
-} */
-
 .info h3:before {
   content: "";
   position: absolute;
@@ -87,36 +88,26 @@
   transform: rotate(-20deg) translateX(450px);
 }
 
-.info {
-  align-content: center;
-  width: 50%;
-}
-.hero img {
-  width: 100%;
-}
-
 /* adaptive */
 
 @media (min-width: 768px) {
   .hero {
     height: 450px;
-    margin-top: 100px;
   }
 
   .info h1 {
-    font-size: 42px;
+    font-size: 38px;
   }
   .info h2 {
     font-size: 25px;
   }
   .info h3 {
-    /* font-size: 18px; */
     width: 40vw;
   }
-  .animation {
+  /* .animation {
     top: 0px;
     left: 0px;
-  }
+  } */
 }
 
 @media (min-width: 900px) {
@@ -141,6 +132,11 @@
     height: 550px;
   }
 
+  .info {
+    margin-left: 80px;
+    width: 70%;
+  }
+
   .info h1 {
     font-size: 48px;
     /* font-size: 52px; */
@@ -154,11 +150,13 @@
   .info h3 {
     font-size: 22px;
     font-weight: 300;
-    /* width: 30vw; */
   }
 }
 
 @media (min-width: 1224px) {
+  .info {
+    margin-left: 100px;
+  }
   .info h1 {
     font-size: 50px;
     /* font-size: 52px; */
@@ -174,6 +172,7 @@
   .hero {
     height: 650px;
   }
+
   .info h1 {
     font-size: 52px;
   }
@@ -184,8 +183,5 @@
   .info h3 {
     font-size: 30px;
     width: 61%;
-  }
-  .hero img {
-    width: 86%;
   }
 }

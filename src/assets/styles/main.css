@@ -102,6 +102,11 @@ html {
 
 @media (min-width: 1024px) {
 }
+/* @media (min-width: 1200px) {
+  .container {
+    width: 84%;
+  }
+} */
 
 @media (min-width: 1440px) {
   .container {

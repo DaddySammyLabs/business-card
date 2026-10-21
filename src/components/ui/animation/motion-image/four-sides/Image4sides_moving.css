@@ -1,6 +1,6 @@
 /* src/components/animation/Image4sides_moving.css */
 
-.hero-image {
+.image {
   width: 90%;
   margin: 0 auto;
   animation: float 8s ease-in-out infinite;
@@ -26,24 +26,4 @@
   100% {
     transform: translate(0px, 0px) rotate(0deg);
   }
-}
-
-@media (min-width: 320px) {
-}
-@media (min-width: 375px) {
-}
-@media (min-width: 412px) {
-}
-@media (min-width: 500px) {
-}
-@media (min-width: 768px) {
-}
-
-@media (min-width: 900px) {
-}
-
-@media (min-width: 1024px) {
-}
-
-@media (min-width: 1440px) {
 }

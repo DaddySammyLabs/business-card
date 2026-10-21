@@ -1,4 +1,5 @@
-@import "../../../ui/theme/theme-colors.css";
+@import "@/components/ui/theme/theme-colors.css";
+
 .heroMobile {
   display: flex;
   flex-direction: column;
@@ -10,7 +11,7 @@
   width: 100%;
 }
 
-.violetText {
+.markedText {
   color: var(--title-color);
 }
 

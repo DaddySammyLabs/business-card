@@ -1,11 +1,11 @@
 import styles from "./Hero.module.css";
 import useResize from "@/hooks/useResize";
-import heroimage from "@/assets/images/Sun_moon-pana.png";
+import image from "@/assets/images/Sun_moon-pana.png";
 
 import HeroMobile from "./hero-mobile/HeroMobile";
 
 // import Animation from "@/components/animation/AnimationHoverResponsive";
-import Animation from "@/components/ui/animation/AnimationHoverResponsive";
+import Animation from "@/components/ui/animation/hover-responsive/floating-image/FloatingImage";
 
 // import ThemeSwitcher from "../components/theme/ThemeSwitcher";
 
@@ -35,14 +35,9 @@ function Hero({ texts }) {
               {texts.hero_subtitle_part5}
             </h2>
             <h3>{texts.hero_info}</h3>
-            {/* first-block-info */}
           </div>
-
-          {/* <ImageBox titleImage={hero} number="first" /> */}
-
-          <Animation titleImage={heroimage} number="first" />
-
-          {/* hero-block */}
+          <div className={styles.image}></div>
+          <Animation image={image} number="first" />
         </div>
       ) : (
         <HeroMobile texts={texts} />
